@@ -13,7 +13,18 @@ def build_logistics():
     <p class="sub">Agent theo d\u00f5i h\u1ed3 s\u01a1 th\u00f4ng quan, nh\u1eafc h\u1ea1n v\u00e0 ph\u1ed1i h\u1ee3p v\u1edbi h\u00e3ng v\u1eadn chuy\u1ec3n. \u0110\u1ed9i logistics t\u1eadp trung x\u1eed l\u00fd ngo\u1ea1i l\u1ec7.</p>
   </div>
 </section>"""
+    html += """
 
+<div class="con">
+  <div class="pgcnav">
+    <span class="pgcnav-label">Ngành</span>
+    <a href="ke-toan.html">Kế toán</a>
+    <a href="logistics.html" class="pgactive">Logistics</a>
+    <a href="tai-chinh.html">Tài chính</a>
+    <a href="nhan-su.html">Nhân sự</a>
+  </div>
+</div>
+"""
     html += """
 <section class="sec" style="padding-bottom:0">
   <div class="con">
@@ -146,7 +157,7 @@ def build_logistics():
   <div class="con">
     <h2>Xem AI agent logistics ch\u1ea1y th\u1eadt</h2>
     <p>B\u1eaft \u0111\u1ea7u t\u1eeb theo d\u00f5i th\u00f4ng quan. K\u1ebft n\u1ed1i h\u1ec7 th\u1ed1ng trong 3 ng\u00e0y, ch\u1ea1y th\u1eadt ngay tu\u1ea7n \u0111\u1ea7u.</p>
-    <a href="mailto:contact@kimq.tech" class="bpw">\u0110\u1eb7t l\u1ecbch trao \u0111\u1ed5i</a>
+    <a href="mailto:contact@kimq.tech" class="bpw bpw-clay">\u0110\u1eb7t l\u1ecbch trao \u0111\u1ed5i</a>
     <a href="index.html" class="bsw">V\u1ec1 trang ch\u1ee7</a>
   </div>
 </section>"""

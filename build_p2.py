@@ -14,6 +14,18 @@ def build_ke_toan():
   </div>
 </section>"""
     html += """
+
+<div class="con">
+  <div class="pgcnav">
+    <span class="pgcnav-label">Ngành àp dụng</span>
+    <a href="ke-toan.html" class="pgactive">Kế toán</a>
+    <a href="logistics.html">Logistics</a>
+    <a href="tai-chinh.html">Tài chính</a>
+    <a href="nhan-su.html">Nhân sự</a>
+  </div>
+</div>
+"""
+    html += """
 <section class="sec" style="padding-bottom:0">
   <div class="con">
     <div class="statrow">
@@ -150,7 +162,7 @@ def build_ke_toan():
   <div class="con">
     <h2>Xem AI agent k\u1ebf to\u00e1n ch\u1ea1y th\u1eadt</h2>
     <p>B\u1eaft \u0111\u1ea7u t\u1eeb nghi\u1ec7p v\u1ee5 \u0111\u1ed1i so\u00e1t. Ch\u00fang t\u00f4i k\u1ebft n\u1ed1i, ch\u1ea1y th\u1eed v\u00e0 b\u00e0n giao trong tu\u1ea7n \u0111\u1ea7u.</p>
-    <a href="mailto:contact@kimq.tech" class="bpw">\u0110\u1eb7t l\u1ecbch trao \u0111\u1ed5i</a>
+    <a href="mailto:contact@kimq.tech" class="bpw bpw-clay">\u0110\u1eb7t l\u1ecbch trao \u0111\u1ed5i</a>
     <a href="index.html" class="bsw">V\u1ec1 trang ch\u1ee7</a>
   </div>
 </section>"""

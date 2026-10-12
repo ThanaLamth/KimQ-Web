@@ -89,7 +89,29 @@ footer{background:#1f1e1d;color:#faf9f5;padding:64px 0 40px}
 .fc2,.fct{font-family:"JetBrains Mono","Courier New",monospace;font-size:.6875rem;color:rgba(250,249,245,.35)}
 .fct a{color:rgba(250,249,245,.55);text-decoration:none}
 @media(max-width:900px){.con{padding:0 20px}.nlinks{display:none}.grid2,.grid3,.statrow,.brief-metrics,.fg{grid-template-columns:1fr 1fr}.frow{grid-template-columns:2.5rem 1fr}.fbadge{display:none}}
-@media(max-width:550px){.grid2,.grid3,.statrow,.brief-metrics,.fg{grid-template-columns:1fr}}"""
+@media(max-width:550px){.grid2,.grid3,.statrow,.brief-metrics,.fg{grid-template-columns:1fr}}
+.card{transition:transform .18s ease,box-shadow .18s ease}
+.card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(20,20,19,.08)}
+.bpw{transition:transform .15s ease,box-shadow .15s ease}
+.bpw:hover{transform:translateY(-1px);box-shadow:0 4px 14px rgba(0,0,0,.18)}
+.bsw:hover{border-color:rgba(250,249,245,.65);color:#fff}
+.ncta:hover{background:#d97757;color:#fff}
+.bpw-clay{background:#d97757!important;color:#fff!important}
+.bpw-clay:hover{background:#c4633d!important;transform:translateY(-1px);box-shadow:0 4px 14px rgba(217,119,87,.35)!important}
+.frow:has(.b-auto) .fnum{color:#2d7d46}
+.frow:has(.b-rev) .fnum{color:#b45309}
+.frow:has(.b-exec) .fnum{color:#1d4ed8}
+.frow:has(.b-auto){border-left:3px solid #e0f5e9}
+.frow:has(.b-rev){border-left:3px solid #fef3cd}
+.frow:has(.b-exec){border-left:3px solid #dbeafe}
+.pgcnav{display:flex;gap:8px;flex-wrap:wrap;padding:20px 0 0;margin-top:28px}
+.pgcnav a{font-size:.8125rem;font-weight:500;color:#5e5d59;text-decoration:none;padding:5px 14px;border:1px solid #d1cfc5;border-radius:100px;transition:all .15s}
+.pgcnav a:hover{background:#f0eee6;border-color:#c4c2b8}
+.pgcnav a.pgactive{background:#141413;color:#fff;border-color:#141413}
+.pgcnav-label{font-family:"JetBrains Mono","Courier New",monospace;font-size:.625rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#999;display:flex;align-items:center;margin-right:4px}
+.stat-item{position:relative;padding-top:16px}
+.stat-item::before{content:"";position:absolute;top:0;left:0;width:28px;height:2px;background:#d1cfc5;border-radius:2px}
+.stat-item:first-child::before{background:#d97757}"""
 
 NAV = """<nav>
   <div class="ni">

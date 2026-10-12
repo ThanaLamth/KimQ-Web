@@ -13,7 +13,18 @@ def build_tai_chinh():
     <p class="sub">Agent th\u1ea9m \u0111\u1ecbnh h\u1ed3 s\u01a1 t\u00edn d\u1ee5ng v\u00e0 gi\u00e1m s\u00e1t giao d\u1ecbch. Kh\u00f4ng t\u1ef1 ph\u00ea duy\u1ec7t, ch\u1ec9 h\u1ed7 tr\u1ee3 chuy\u00ean vi\u00ean ra quy\u1ebft \u0111\u1ecbnh nhanh h\u01a1n.</p>
   </div>
 </section>"""
+    html += """
 
+<div class="con">
+  <div class="pgcnav">
+    <span class="pgcnav-label">Ngành</span>
+    <a href="ke-toan.html">Kế toán</a>
+    <a href="logistics.html">Logistics</a>
+    <a href="tai-chinh.html" class="pgactive">Tài chính</a>
+    <a href="nhan-su.html">Nhân sự</a>
+  </div>
+</div>
+"""
     html += """
 <section class="sec" style="padding-bottom:0">
   <div class="con">
@@ -151,7 +162,7 @@ def build_tai_chinh():
   <div class="con">
     <h2>Xem AI agent t\u00e0i ch\u00ednh ch\u1ea1y th\u1eadt</h2>
     <p>B\u1eaft \u0111\u1ea7u t\u1eeb th\u1ea9m \u0111\u1ecbnh KYC ho\u1eb7c \u0111\u1ed1i so\u00e1t giao d\u1ecbch. K\u1ebft n\u1ed1i h\u1ec7 th\u1ed1ng trong 3 ng\u00e0y.</p>
-    <a href="mailto:contact@kimq.tech" class="bpw">\u0110\u1eb7t l\u1ecbch trao \u0111\u1ed5i</a>
+    <a href="mailto:contact@kimq.tech" class="bpw bpw-clay">\u0110\u1eb7t l\u1ecbch trao \u0111\u1ed5i</a>
     <a href="index.html" class="bsw">V\u1ec1 trang ch\u1ee7</a>
   </div>
 </section>"""

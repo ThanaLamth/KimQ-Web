@@ -13,7 +13,18 @@ def build_nhan_su():
     <p class="sub">Agent qu\u00e9t h\u1ed3 s\u01a1 lao \u0111\u1ed9ng, ph\u00e1t hi\u1ec7n r\u1ee7i ro v\u00e0 so\u1ea1n nh\u00e1p \u0111\u1ec3 ng\u01b0\u1eddi c\u00f3 th\u1ea9m quy\u1ec1n quy\u1ebft \u0111\u1ecbnh. Kh\u00f4ng \u0111\u1ec3 h\u1ee3p \u0111\u1ed3ng h\u1ebft h\u1ea1n kh\u00f4ng \u0111\u01b0\u1ee3c x\u1eed l\u00fd.</p>
   </div>
 </section>"""
+    html += """
 
+<div class="con">
+  <div class="pgcnav">
+    <span class="pgcnav-label">Ngành</span>
+    <a href="ke-toan.html">Kế toán</a>
+    <a href="logistics.html">Logistics</a>
+    <a href="tai-chinh.html">Tài chính</a>
+    <a href="nhan-su.html" class="pgactive">Nhân sự</a>
+  </div>
+</div>
+"""
     html += """
 <section class="sec" style="padding-bottom:0">
   <div class="con">
@@ -171,7 +182,7 @@ def build_nhan_su():
   <div class="con">
     <h2>Xem AI agent HR ch\u1ea1y th\u1eadt</h2>
     <p>B\u1eaft \u0111\u1ea7u t\u1eeb qu\u00e9t h\u1ee3p \u0111\u1ed3ng lao \u0111\u1ed9ng. Ph\u00e1t hi\u1ec7n r\u1ee7i ro v\u00e0 so\u1ea1n nh\u00e1p trong ng\u00e0y \u0111\u1ea7u ti\u00ean.</p>
-    <a href="mailto:contact@kimq.tech" class="bpw">\u0110\u1eb7t l\u1ecbch trao \u0111\u1ed5i</a>
+    <a href="mailto:contact@kimq.tech" class="bpw bpw-clay">\u0110\u1eb7t l\u1ecbch trao \u0111\u1ed5i</a>
     <a href="index.html" class="bsw">V\u1ec1 trang ch\u1ee7</a>
   </div>
 </section>"""
