@@ -6,15 +6,70 @@
     <div class="pgrd">
       <div class="prc">
         <div class="pra">Agent · Kế toán</div>
-        <p>Đối chiếu sao kê ngân hàng mỗi sáng 06:00. 38/41 giao dịch tự khớp. 3 khoản treo được báo cáo trước khi đội ngũ vào làm.</p>
+        <p>Đối chiếu sao kê ngân hàng mỗi sáng 06:00. 38/41 giao dịch tự khớp. 3 khoản treo báo cáo trước giờ làm.</p>
+        <!-- Bar chart: giao dịch -->
+        <div class="mini-chart">
+          <svg viewBox="0 0 200 72" width="100%" height="72" xmlns="http://www.w3.org/2000/svg">
+            <!-- Background grid -->
+            <line x1="0" y1="56" x2="200" y2="56" stroke="#e8e6dc" stroke-width="1"/>
+            <line x1="0" y1="36" x2="200" y2="36" stroke="#e8e6dc" stroke-width="1"/>
+            <line x1="0" y1="16" x2="200" y2="16" stroke="#e8e6dc" stroke-width="1"/>
+            <!-- Auto-matched bar (green) -->
+            <rect x="12" y="10" width="60" height="46" rx="4" fill="#4a7c59" opacity=".85"/>
+            <text x="42" y="7" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" font-weight="700" fill="#4a7c59">38</text>
+            <text x="42" y="68" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="8" fill="#888">Tự khớp</text>
+            <!-- Pending bar (orange) -->
+            <rect x="82" y="46" width="60" height="10" rx="4" fill="#d97757" opacity=".85"/>
+            <text x="112" y="43" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" font-weight="700" fill="#d97757">3</text>
+            <text x="112" y="68" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="8" fill="#888">Treo</text>
+            <!-- Total label -->
+            <text x="164" y="36" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" fill="#aaa">41</text>
+            <text x="164" y="46" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="8" fill="#bbb">tổng</text>
+          </svg>
+        </div>
       </div>
       <div class="prc">
         <div class="pra">Agent · Nhân sự</div>
-        <p>Quét hợp đồng lao động định kỳ. Phát hiện hết hạn trước 30 ngày. Soạn nháp gia hạn kèm căn cứ pháp lý, người phụ trách ký.</p>
+        <p>Quét hợp đồng lao động định kỳ. Phát hiện hết hạn trước 30 ngày. Soạn nháp gia hạn kèm căn cứ pháp lý.</p>
+        <!-- Donut-style progress -->
+        <div class="mini-chart">
+          <svg viewBox="0 0 200 72" width="100%" height="72" xmlns="http://www.w3.org/2000/svg">
+            <line x1="0" y1="56" x2="200" y2="56" stroke="#e8e6dc" stroke-width="1"/>
+            <!-- 146 scanned -->
+            <rect x="12" y="14" width="80" height="42" rx="4" fill="#1a4fad" opacity=".12"/>
+            <rect x="12" y="14" width="80" height="42" rx="4" fill="none" stroke="#1a4fad" stroke-width="1" opacity=".3"/>
+            <text x="52" y="33" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="13" font-weight="800" fill="#1a4fad">146</text>
+            <text x="52" y="46" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="8" fill="#1a4fad" opacity=".7">hồ sơ quét</text>
+            <text x="52" y="68" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="8" fill="#888">Tổng</text>
+            <!-- 2 expired -->
+            <rect x="104" y="38" width="30" height="18" rx="4" fill="#c0392b" opacity=".85"/>
+            <text x="119" y="35" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" font-weight="700" fill="#c0392b">2</text>
+            <text x="119" y="68" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="8" fill="#888">Hết hạn</text>
+            <!-- 3 soon -->
+            <rect x="144" y="32" width="30" height="24" rx="4" fill="#d97757" opacity=".85"/>
+            <text x="159" y="29" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" font-weight="700" fill="#d97757">3</text>
+            <text x="159" y="68" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="8" fill="#888">Sắp hết</text>
+          </svg>
+        </div>
       </div>
       <div class="prc">
         <div class="pra">Agent · Điều hành</div>
-        <p>Bản tin 07:30 mỗi sáng: 4 chỉ số vận hành, 3 quyết định cần phê duyệt. Lãnh đạo nhận qua kênh nhắn tin, trả lời trong 5 phút.</p>
+        <p>Bản tin 07:30 mỗi sáng: 4 chỉ số vận hành, 3 quyết định cần phê duyệt. Lãnh đạo trả lời trong 5 phút.</p>
+        <!-- Time saved chart -->
+        <div class="mini-chart">
+          <svg viewBox="0 0 200 72" width="100%" height="72" xmlns="http://www.w3.org/2000/svg">
+            <line x1="0" y1="56" x2="200" y2="56" stroke="#e8e6dc" stroke-width="1"/>
+            <!-- Before bar -->
+            <rect x="12" y="16" width="70" height="40" rx="4" fill="#e8e6dc"/>
+            <text x="47" y="34" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="11" font-weight="700" fill="#888">45 ph</text>
+            <text x="47" y="46" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="8" fill="#aaa">họp sáng</text>
+            <text x="47" y="68" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="8" fill="#aaa">Trước</text>
+            <!-- After bar -->
+            <rect x="92" y="46" width="70" height="10" rx="4" fill="#4a7c59" opacity=".9"/>
+            <text x="127" y="43" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="9" font-weight="700" fill="#4a7c59">5 ph</text>
+            <text x="127" y="68" text-anchor="middle" font-family="'Be Vietnam Pro',sans-serif" font-size="8" fill="#4a7c59">Với AI agent</text>
+          </svg>
+        </div>
       </div>
     </div>
   </div>
