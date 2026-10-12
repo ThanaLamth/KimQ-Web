@@ -54,7 +54,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;height:var(--nav-h);backgrou
 .pcard{background:var(--white);border:var(--border);border-radius:var(--r-md);padding:var(--sp-9) var(--sp-8);display:flex;flex-direction:column;gap:var(--sp-4);transition:var(--t-base)}
 .pcard:hover{box-shadow:0 8px 32px var(--slate-10);transform:translateY(-2px)}
 .pno{font-family:var(--font-mono);font-size:var(--detail-xs);font-weight:var(--fw-medium);letter-spacing:.08em;text-transform:uppercase;color:var(--cloud-dark)}
-.pico{font-size:1.5rem;line-height:1}
+.pico{display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:var(--r-sm);background:var(--ivory-dark);color:var(--slate-dark);flex-shrink:0}
 .pname{font-family:var(--font-sans);font-size:var(--text-xs);font-weight:var(--fw-semibold);letter-spacing:var(--ls-snug);color:var(--slate-dark)}
 .pdesc{font-family:var(--font-serif);font-size:var(--detail-s);color:var(--slate-light);line-height:var(--lh-loose)}
 .pfoot{margin-top:auto;padding-top:var(--sp-4);border-top:1px solid var(--ivory-dark);font-family:var(--font-mono);font-size:var(--detail-xs);color:var(--cloud-dark)}
@@ -74,7 +74,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;height:var(--nav-h);backgrou
 /* TRUST */
 .tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-5)}
 .tcard{border:var(--border);border-radius:var(--r-md);padding:var(--sp-8) var(--sp-7);background:var(--white)}
-.tico{font-size:1.375rem;margin-bottom:var(--sp-4)}
+.tico{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:var(--r-sm);background:var(--ivory-dark);color:var(--slate-dark);margin-bottom:var(--sp-4);flex-shrink:0}
 .tt{font-family:var(--font-sans);font-size:var(--detail-l);font-weight:var(--fw-semibold);margin-bottom:var(--sp-3);color:var(--slate-dark)}
 .tul{list-style:none}
 .tul li{font-family:var(--font-serif);font-size:var(--detail-s);color:var(--slate-light);padding:var(--sp-2) 0;border-bottom:1px solid var(--ivory-dark);display:flex;gap:var(--sp-2);align-items:baseline}
@@ -208,7 +208,7 @@ footer{background:var(--footer-bg);color:var(--footer-text);padding:var(--sp-11)
     <div class="pgrid">
       <div class="pcard">
         <div style="display:flex;justify-content:space-between;align-items:flex-start">
-          <span class="pno">01 · Work</span><span class="pico">💬</span>
+          <span class="pno">01 · Work</span><span class="pico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
         </div>
         <div class="pname">Trợ lý trên Zalo</div>
         <p class="pdesc">Tra quy chế, làm theo quy trình, cập nhật tiến độ bằng tin nhắn Zalo. Nhân viên hỏi — agent trả lời có nguồn. Quản lý nhận bản tổng hợp vấn đề và người phụ trách.</p>
@@ -216,7 +216,7 @@ footer{background:var(--footer-bg);color:var(--footer-text);padding:var(--sp-11)
       </div>
       <div class="pcard">
         <div style="display:flex;justify-content:space-between;align-items:flex-start">
-          <span class="pno">02 · Insight</span><span class="pico">📊</span>
+          <span class="pno">02 · Insight</span><span class="pico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span>
         </div>
         <div class="pname">Dashboard có giải thích</div>
         <p class="pdesc">Gộp số liệu bán hàng, marketing, kế toán, vận hành. AI giải thích tại sao số liệu thay đổi, chỉ nguyên nhân và đề xuất bước tiếp theo — không chỉ hiển thị con số.</p>
@@ -224,7 +224,7 @@ footer{background:var(--footer-bg);color:var(--footer-text);padding:var(--sp-11)
       </div>
       <div class="pcard">
         <div style="display:flex;justify-content:space-between;align-items:flex-start">
-          <span class="pno">03 · Flow</span><span class="pico">🔄</span>
+          <span class="pno">03 · Flow</span><span class="pico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg></span>
         </div>
         <div class="pname">Phối hợp liên phòng</div>
         <p class="pdesc">Theo dõi công việc giữa các phòng ban, phê duyệt theo quy trình, nhắc đúng người khi quá hạn. Agent điều phối — người ra quyết định khi vượt phạm vi quyền.</p>
@@ -275,7 +275,7 @@ footer{background:var(--footer-bg);color:var(--footer-text);padding:var(--sp-11)
     <p class="sp">Ba vùng phân quyền rõ ràng để bắt đầu nhỏ và mở rộng an toàn.</p>
     <div class="tgrid">
       <div class="tcard">
-        <div class="tico">⚡</div>
+        <div class="tico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
         <div class="tt">Agent tự làm</div>
         <ul class="tul">
           <li><span>Tra cứu tồn kho, giá, quy chế</span></li>
@@ -286,7 +286,7 @@ footer{background:var(--footer-bg);color:var(--footer-text);padding:var(--sp-11)
         </ul>
       </div>
       <div class="tcard">
-        <div class="tico">👤</div>
+        <div class="tico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></svg></div>
         <div class="tt">Agent đề xuất — người duyệt</div>
         <ul class="tul">
           <li><span>Chiết khấu vượt phân quyền</span></li>
@@ -297,7 +297,7 @@ footer{background:var(--footer-bg);color:var(--footer-text);padding:var(--sp-11)
         </ul>
       </div>
       <div class="tcard">
-        <div class="tico">🔒</div>
+        <div class="tico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
         <div class="tt">Agent không làm</div>
         <ul class="tul">
           <li><span>Trả lời ngoài nguồn đã duyệt</span></li>

@@ -1,0 +1,72 @@
+<section class="ctas" id="contact">
+  <div class="con">
+    <p class="sl" style="color:rgba(255,255,255,.4)">Bắt đầu cùng KimQ</p>
+    <h2 class="sh" style="color:#fff;margin:0 auto 22px;max-width:560px;text-align:center">Hiểu nghiệp vụ trước, rồi mới viết phần mềm</h2>
+    <p class="sp" style="color:rgba(255,255,255,.52);margin:0 auto 46px;text-align:center">Chọn một nghiệp vụ có người phụ trách rõ ràng. Chúng tôi trao đổi nghiệp vụ, thiết kế giải pháp và chạy thật trong tuần đầu.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a href="mailto:contact@kimq.tech" class="bp" style="background:#fff;color:#111">Liên hệ tư vấn</a>
+      <a href="#products" class="bs" style="border-color:rgba(255,255,255,.3);color:#fff">Xem sản phẩm</a>
+    </div>
+    <p style="margin-top:30px;font-size:13px;color:rgba(255,255,255,.32);text-align:center">contact@kimq.tech · Không tốn chi phí máy chủ riêng · Bắt đầu nhỏ, trả theo phạm vi</p>
+  </div>
+</section>
+<footer>
+  <div class="con">
+    <div class="fg">
+      <div>
+        <span class="flo">KimQ</span>
+        <p class="ftag">Studio sản phẩm số tại Việt Nam. Phát triển phần mềm và AI agent theo cách AI-native — agent làm việc ngay trên Zalo, Excel và phần mềm doanh nghiệp đang dùng.</p>
+      </div>
+      <div class="fc">
+        <h4>Sản phẩm</h4>
+        <a href="#products">KimQ Work</a>
+        <a href="#products">KimQ Insight</a>
+        <a href="#products">KimQ Flow</a>
+      </div>
+      <div class="fc">
+        <h4>Ứng dụng</h4>
+        <a href="#usecases">Kế toán</a>
+        <a href="#usecases">Logistics</a>
+        <a href="#usecases">Tài chính</a>
+        <a href="#usecases">Nhân sự</a>
+      </div>
+      <div class="fc">
+        <h4>Công ty</h4>
+        <a href="#about">Về KimQ</a>
+        <a href="#roadmap">Lộ trình</a>
+        <a href="mailto:contact@kimq.tech">Liên hệ</a>
+      </div>
+    </div>
+    <div class="fb">
+      <span class="fc2">&copy; 2026 KimQ. All rights reserved.</span>
+      <span class="fct"><a href="mailto:contact@kimq.tech">contact@kimq.tech</a></span>
+    </div>
+  </div>
+</footer>
+<script>
+function switchTab(e,id){
+  document.querySelectorAll('.tb').forEach(function(b){b.classList.remove('act')});
+  document.querySelectorAll('.up').forEach(function(p){p.classList.remove('act')});
+  e.currentTarget.classList.add('act');
+  document.getElementById('p-'+id).classList.add('act');
+}
+(function(){
+  var h=document.getElementById('hero-h1');
+  if(!h)return;
+  var words=h.textContent.trim().split(/(\s+)/);
+  h.innerHTML='';
+  var delay=0;
+  words.forEach(function(w){
+    if(/^\s+$/.test(w)){h.appendChild(document.createTextNode(' '));}
+    else{var s=document.createElement('span');s.className='word';s.textContent=w;s.style.animationDelay=delay+'ms';h.appendChild(s);delay+=55;}
+  });
+})();
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var t=document.querySelector(a.getAttribute('href'));
+    if(t){e.preventDefault();window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-76,behavior:'smooth'});}
+  });
+});
+</script>
+</body>
+</html>
