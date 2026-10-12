@@ -1,76 +1,76 @@
-<section class="sec" id="usecases">
+﻿<section class="sec" id="usecases">
   <div class="con">
     <p class="sl">05 / Ứng dụng theo ngành</p>
     <h2 class="sh">AI agent cho từng đội ngũ</h2>
-    <p class="sp">Kế toán · Logistics · Tài chính – Ngân hàng · Nhân sự</p>
+    <p class="sp">Kế toán · Logistics · Tài chính · Nhân sự</p>
     <div class="utabs">
       <button class="tb act" onclick="switchTab(event,'ketoan')">Kế toán</button>
       <button class="tb" onclick="switchTab(event,'logistics')">Logistics</button>
-      <button class="tb" onclick="switchTab(event,'taichinh')">Tài chính – Ngân hàng</button>
+      <button class="tb" onclick="switchTab(event,'taichinh')">Tài chính</button>
       <button class="tb" onclick="switchTab(event,'nhansu')">Nhân sự</button>
     </div>
     <div id="p-ketoan" class="up act">
       <div class="uc">
         <div class="utag">AI Invoice / AP Agent</div>
-        <div class="uct">Xử lý hóa đơn &amp; công nợ</div>
-        <p class="ucd">Agent tra hóa đơn, khớp công nợ, gợi ý bước tiếp theo và soạn nháp — ghi nhật ký tự động.</p>
-        <div class="uhl">41 giao dịch → 38 tự khớp · 3 khoản treo chuyển kế toán trưởng</div>
-        <a href="ke-toan.html" style="display:inline-block;margin-top:14px;font-size:13px;font-weight:600;color:#111;text-decoration:none;border-bottom:1px solid #D4CFC7">Xem chi tiết →</a>
+        <div class="uct">Xử lý hóa đơn và công nợ</div>
+        <p class="ucd">Agent tra hóa đơn, khớp công nợ, gợi ý bước tiếp theo và soạn nháp. Kế toán kiểm tra khoản treo, không cần nhập liệu lại.</p>
+        <div class="uhl">38/41 giao dịch tự khớp · 3 khoản treo báo cáo trưởng phòng</div>
+        <a href="ke-toan.html" class="ulink">Xem demo chi tiết</a>
       </div>
       <div class="uc">
         <div class="utag">AI Reconciliation Agent</div>
         <div class="uct">Đối soát ngân hàng hằng ngày</div>
-        <p class="ucd">06:00 sáng, agent đối chiếu sao kê ngân hàng đêm qua, phân loại giao dịch, báo cáo khoản treo — không cần nhân sự vào sớm.</p>
-        <div class="uhl">06:00 · Đối chiếu tự động · Báo cáo trước 07:00</div>
-        <a href="ke-toan.html" style="display:inline-block;margin-top:14px;font-size:13px;font-weight:600;color:#111;text-decoration:none;border-bottom:1px solid #D4CFC7">Xem chi tiết →</a>
+        <p class="ucd">06:00 sáng, agent đối chiếu sao kê đêm qua, phân loại giao dịch và báo cáo khoản treo trước giờ làm việc.</p>
+        <div class="uhl">06:00 đối chiếu · Báo cáo trước 07:00 · Không cần vào sớm</div>
+        <a href="ke-toan.html" class="ulink">Xem demo chi tiết</a>
       </div>
     </div>
     <div id="p-logistics" class="up">
       <div class="uc">
         <div class="utag">AI Logistics Document Agent</div>
-        <div class="uct">Hồ sơ thông quan &amp; vận chuyển</div>
-        <p class="ucd">Agent theo dõi hồ sơ thông quan, nhắc hạn, đối chiếu với hãng vận chuyển và soạn nháp chứng từ.</p>
-        <div class="uhl">Thời gian thông quan: 5,8 ngày · Cảnh báo khi tăng 2,1 ngày</div>
-        <a href="logistics.html" style="display:inline-block;margin-top:14px;font-size:13px;font-weight:600;color:#111;text-decoration:none;border-bottom:1px solid #D4CFC7">Xem chi tiết →</a>
+        <div class="uct">Hồ sơ thông quan và vận chuyển</div>
+        <p class="ucd">Agent theo dõi hồ sơ thông quan, nhắc hạn, đối chiếu với hãng vận chuyển và soạn nháp chứng từ thay đội logistics.</p>
+        <div class="uhl">Thời gian thông quan 5,8 ngày · Cảnh báo khi chậm hơn chuẩn</div>
+        <a href="logistics.html" class="ulink">Xem demo chi tiết</a>
       </div>
       <div class="uc">
         <div class="utag">Vận hành bên ngoài</div>
-        <div class="uct">Kết nối nhà cung cấp &amp; hãng tàu</div>
-        <p class="ucd">Agent theo dõi, đối chiếu và trao đổi với nhà cung cấp, hãng vận chuyển, khách hàng thay đội ngũ.</p>
-        <div class="uhl">Không cần gọi điện thủ công · Nhắc hạn tự động</div>
-        <a href="logistics.html" style="display:inline-block;margin-top:14px;font-size:13px;font-weight:600;color:#111;text-decoration:none;border-bottom:1px solid #D4CFC7">Xem chi tiết →</a>
+        <div class="uct">Kết nối nhà cung cấp và hãng tàu</div>
+        <p class="ucd">Agent theo dõi, đối chiếu và phối hợp với nhà cung cấp, hãng vận chuyển, khách hàng. Nhắc hạn tự động, không gọi điện thủ công.</p>
+        <div class="uhl">Tự động nhắc hạn · Giảm cuộc gọi thủ công</div>
+        <a href="logistics.html" class="ulink">Xem demo chi tiết</a>
       </div>
     </div>
     <div id="p-taichinh" class="up">
       <div class="uc">
         <div class="utag">KYC / KYB Agent</div>
         <div class="uct">Thẩm định hồ sơ tín dụng</div>
-        <p class="ucd">Agent kiểm tra hồ sơ, đối chiếu số liệu, nêu tín hiệu kèm bằng chứng — không phê duyệt tín dụng thay người.</p>
-        <div class="uhl">1/4 hồ sơ không cần xem thêm · 3/4 chuyển người xem xét</div>
-        <a href="tai-chinh.html" style="display:inline-block;margin-top:14px;font-size:13px;font-weight:600;color:#111;text-decoration:none;border-bottom:1px solid #D4CFC7">Xem chi tiết →</a>
+        <p class="ucd">Agent kiểm tra hồ sơ, đối chiếu số liệu và nêu tín hiệu rủi ro kèm bằng chứng. Người thẩm định phê duyệt, agent không thay thế quyết định.</p>
+        <div class="uhl">1/4 hồ sơ xử lý nhanh · 3/4 chuyển người thẩm định</div>
+        <a href="tai-chinh.html" class="ulink">Xem demo chi tiết</a>
       </div>
       <div class="uc">
-        <div class="utag">Giao dịch &amp; Đối soát</div>
+        <div class="utag">Giao dịch và Đối soát</div>
         <div class="uct">Giám sát giao dịch chưa khớp</div>
         <p class="ucd">Theo dõi giao dịch ngân hàng chưa khớp, phân loại và cảnh báo theo ngưỡng. Bản tin điều hành 07:30 mỗi sáng.</p>
-        <div class="uhl">9 giao dịch chưa khớp · 380 triệu · Bản tin 07:30 sáng</div>
-        <a href="tai-chinh.html" style="display:inline-block;margin-top:14px;font-size:13px;font-weight:600;color:#111;text-decoration:none;border-bottom:1px solid #D4CFC7">Xem chi tiết →</a>
+        <div class="uhl">9 giao dịch chưa khớp · 380 triệu · Bản tin 07:30</div>
+        <a href="tai-chinh.html" class="ulink">Xem demo chi tiết</a>
       </div>
     </div>
     <div id="p-nhansu" class="up">
       <div class="uc">
-        <div class="utag">Hợp đồng &amp; Onboarding</div>
+        <div class="utag">Hợp đồng và Onboarding</div>
         <div class="uct">Không để hợp đồng hết hạn</div>
-        <p class="ucd">Agent quét toàn bộ hồ sơ, phát hiện hợp đồng sắp hết hạn. Căn cứ Bộ luật Lao động, soạn nháp gia hạn — người có thẩm quyền ký.</p>
+        <p class="ucd">Agent quét toàn bộ hồ sơ, phát hiện hợp đồng sắp hết hạn. Soạn nháp gia hạn theo Bộ luật Lao động, người có thẩm quyền ký.</p>
         <div class="uhl">146 hồ sơ quét · 2 đã hết hạn · 3 hết hạn trong vài ngày</div>
-        <a href="nhan-su.html" style="display:inline-block;margin-top:14px;font-size:13px;font-weight:600;color:#111;text-decoration:none;border-bottom:1px solid #D4CFC7">Xem chi tiết →</a>
+        <a href="nhan-su.html" class="ulink">Xem demo chi tiết</a>
       </div>
       <div class="uc">
-        <div class="utag">HR Helpdesk &amp; Lương</div>
+        <div class="utag">HR Helpdesk và Lương</div>
         <div class="uct">Giải thích lương minh bạch</div>
-        <p class="ucd">Nhân viên hỏi chính sách — nhận câu trả lời có nguồn. Thu nhập được giải thích từng dòng. Agent KPI xếp hạng và gợi ý coaching.</p>
-        <div class="uhl">KPI 104% → Khung 100–119% · Giải thích từng khoản</div>
-        <a href="nhan-su.html" style="display:inline-block;margin-top:14px;font-size:13px;font-weight:600;color:#111;text-decoration:none;border-bottom:1px solid #D4CFC7">Xem chi tiết →</a>
+        <p class="ucd">Nhân viên hỏi chính sách, nhận câu trả lời có nguồn. Thu nhập được giải thích từng dòng. Agent KPI xếp hạng và gợi ý coaching.</p>
+        <div class="uhl">KPI 104% · Khung 100–119% · Giải thích từng khoản</div>
+        <a href="nhan-su.html" class="ulink">Xem demo chi tiết</a>
       </div>
     </div>
   </div>
