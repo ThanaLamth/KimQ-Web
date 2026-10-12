@@ -7,7 +7,7 @@
 :root{
 --font-sans:"Anthropic Sans",Arial,sans-serif;
 --font-serif:"Anthropic Serif",Georgia,serif;
---font-mono:"Anthropic Mono",Arial,monospace;
+--font-mono:"Anthropic Mono","Courier New",monospace;
 --text-xxxl:6rem;--text-xxl:4.5rem;--text-xl:4rem;--text-l:3rem;
 --text-m:2rem;--text-s:1.5rem;--text-xs:1.25rem;
 --para-l:1.5rem;--para-m:1.25rem;--para-s:1.125rem;--para-xs:1rem;
