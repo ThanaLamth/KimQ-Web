@@ -1,107 +1,96 @@
-<!-- TITLE: KimQ AI · Kế toán -->
 <!DOCTYPE html>
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KimQ AI · Kế toán</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:"Inter",system-ui,sans-serif;background:#F5F0E8;color:#111;line-height:1.6;-webkit-font-smoothing:antialiased}
-:root{--ivory:#F5F0E8;--ivory-d:#EDE8DF;--black:#111;--gray:#6B6B6B;--gl:#D4CFC7;--white:#fff;--r:12px;--nh:64px;--gap:96px;--mw:1200px}
-.con{max-width:var(--mw);margin:0 auto;padding:0 40px}
-.pill{display:inline-block;padding:4px 14px;border:1px solid var(--gl);border-radius:100px;font-size:12px;color:var(--gray)}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;height:var(--nh);background:rgba(245,240,232,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--gl);display:flex;align-items:center}
-.ni{display:flex;align-items:center;width:100%;max-width:var(--mw);margin:0 auto;padding:0 40px}
-.nl{font-size:18px;font-weight:800;letter-spacing:-.03em;color:var(--black);text-decoration:none;margin-right:auto;display:flex;align-items:center;gap:8px}
-.lm{width:30px;height:30px;background:var(--black);border-radius:7px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:15px;font-weight:900;flex-shrink:0}
+body{font-family:"Be Vietnam Pro",system-ui,sans-serif;background:#faf9f5;color:#141413;line-height:1.6;-webkit-font-smoothing:antialiased;font-size:15px}
+.con{max-width:1200px;margin:0 auto;padding:0 40px}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:64px;background:rgba(250,249,245,.92);backdrop-filter:blur(12px);border-bottom:1px solid #d1cfc5;display:flex;align-items:center}
+.ni{display:flex;align-items:center;width:100%;max-width:1200px;margin:0 auto;padding:0 40px}
+.nl{font-size:1.125rem;font-weight:800;letter-spacing:-.03em;color:#141413;text-decoration:none;margin-right:auto;display:flex;align-items:center;gap:8px}
+.lm{width:28px;height:28px;background:#141413;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;font-weight:900;flex-shrink:0}
 .nlinks{display:flex;gap:28px}
-.nlinks a{font-size:14px;color:var(--black);text-decoration:none;opacity:.65;transition:opacity .2s}
-.nlinks a:hover,.nlinks a.cur{opacity:1;font-weight:600}
-.ncta{margin-left:28px;padding:9px 22px;background:var(--black);color:#fff;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none;white-space:nowrap}
-.ncta:hover{opacity:.82}
-/* page hero */
-.phero{padding:calc(var(--nh) + 64px) 0 64px;border-bottom:1px solid var(--gl)}
-.phero .kicker{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray);font-family:monospace;margin-bottom:16px}
-.phero h1{font-size:clamp(28px,4vw,52px);font-weight:800;letter-spacing:-.04em;line-height:1.1;max-width:720px;margin-bottom:18px}
-.phero .sub{font-size:17px;color:var(--gray);max-width:520px;line-height:1.72}
-/* content */
-.sec{padding:var(--gap) 0}
-.sl{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray);font-family:monospace;margin-bottom:14px}
-.sh{font-size:clamp(22px,2.8vw,38px);font-weight:700;letter-spacing:-.03em;line-height:1.2;max-width:680px;margin-bottom:16px}
-.sp{font-size:15px;color:var(--gray);max-width:520px;line-height:1.72;margin-bottom:44px}
-.dv{height:1px;background:var(--gl)}
-/* cards */
+.nlinks a{font-size:.875rem;font-weight:500;color:#141413;text-decoration:none;opacity:.6;transition:opacity .2s}
+.nlinks a:hover{opacity:1}
+.ncta{margin-left:28px;padding:.4375rem 1.125rem;background:#141413;color:#fff;border-radius:6px;font-size:.875rem;font-weight:500;text-decoration:none}
+.phero{padding:calc(64px + 72px) 0 72px;border-bottom:1px solid #d1cfc5}
+.kicker{font-family:"JetBrains Mono","Courier New",monospace;font-size:.6875rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#999;margin-bottom:16px}
+.phero h1{font-size:clamp(1.875rem,4vw,3rem);font-weight:800;letter-spacing:-.04em;line-height:1.08;max-width:720px;margin-bottom:20px;color:#141413}
+.phero .sub{font-size:1.0625rem;font-weight:400;color:#5e5d59;max-width:520px;line-height:1.72}
+.sec{padding:80px 0}
+.sl{font-family:"JetBrains Mono","Courier New",monospace;font-size:.6875rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#999;margin-bottom:14px}
+.sh{font-size:clamp(1.25rem,2.4vw,1.875rem);font-weight:700;letter-spacing:-.025em;line-height:1.15;max-width:640px;margin-bottom:16px;color:#141413}
+.sp{font-size:1rem;font-weight:400;color:#5e5d59;max-width:520px;line-height:1.65;margin-bottom:44px}
+.dv{height:1px;background:#d1cfc5}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{background:var(--white);border:1px solid var(--gl);border-radius:var(--r);padding:28px 24px}
-.card-tag{font-size:11px;font-family:monospace;font-weight:700;text-transform:uppercase;color:var(--gray);margin-bottom:12px;letter-spacing:.05em}
-.card-t{font-size:17px;font-weight:700;margin-bottom:10px;letter-spacing:-.01em}
-.card-d{font-size:13px;color:var(--gray);line-height:1.65}
-.card-hl{background:var(--ivory-d);border-radius:8px;padding:11px 14px;margin-top:13px;font-size:13px;font-weight:500;line-height:1.5}
-/* data table */
-.dtbl{width:100%;border-collapse:collapse;background:var(--white);border:1px solid var(--gl);border-radius:var(--r);overflow:hidden}
-.dtbl th{text-align:left;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gray);padding:12px 20px;background:var(--ivory-d);border-bottom:1px solid var(--gl)}
-.dtbl td{padding:14px 20px;font-size:14px;border-bottom:1px solid var(--ivory-d);vertical-align:top}
+.card{background:#fff;border:1px solid #d1cfc5;border-radius:12px;padding:28px 24px}
+.card-tag{font-family:"JetBrains Mono","Courier New",monospace;font-size:.625rem;font-weight:600;text-transform:uppercase;color:#999;margin-bottom:12px;letter-spacing:.08em}
+.card-t{font-size:1.0625rem;font-weight:700;margin-bottom:10px;letter-spacing:-.02em;color:#141413}
+.card-d{font-size:.875rem;font-weight:400;color:#5e5d59;line-height:1.65}
+.card-hl{background:#f0eee6;border-radius:8px;padding:11px 14px;margin-top:13px;font-size:.8125rem;font-weight:500;line-height:1.5;color:#141413}
+.statrow{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:44px 0;border-bottom:1px solid #d1cfc5}
+.stat-v{font-size:2.25rem;font-weight:800;letter-spacing:-.04em;line-height:1;color:#141413}
+.stat-l{font-size:.75rem;color:#5e5d59;margin-top:6px;line-height:1.5}
+.stat-d{font-family:"JetBrains Mono","Courier New",monospace;font-size:.625rem;font-weight:600;margin-top:3px}
+.up-c{color:#c0392b}.dn-c{color:#27ae60}
+.flowbox{display:flex;flex-direction:column;border:1px solid #d1cfc5;border-radius:12px;overflow:hidden;background:#fff}
+.frow{display:grid;grid-template-columns:2.75rem 1fr auto;align-items:stretch;border-bottom:1px solid #e8e6dc}
+.frow:last-child{border-bottom:none}
+.fnum{padding:18px 0 18px 18px;font-family:"JetBrains Mono","Courier New",monospace;font-size:.6875rem;font-weight:700;color:#bbb;display:flex;align-items:center}
+.fbody{padding:18px 20px;font-size:.875rem;line-height:1.55;display:flex;flex-direction:column;gap:3px}
+.fbody strong{font-weight:600;color:#141413}
+.fbody span{font-size:.8125rem;color:#5e5d59}
+.fbadge{padding:18px 20px;display:flex;align-items:center;justify-content:center;min-width:120px}
+.badge{padding:4px 12px;border-radius:100px;font-family:"JetBrains Mono","Courier New",monospace;font-size:.5625rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;white-space:nowrap}
+.b-auto{background:#f0faf3;color:#2d7d46}
+.b-rev{background:#fef9ee;color:#b45309}
+.b-exec{background:#eff6ff;color:#1d4ed8}
+.dtbl{width:100%;border-collapse:collapse;background:#fff;border:1px solid #d1cfc5;border-radius:12px;overflow:hidden}
+.dtbl th{text-align:left;font-family:"JetBrains Mono","Courier New",monospace;font-size:.5625rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#999;padding:12px 20px;background:#e8e6dc;border-bottom:1px solid #d1cfc5}
+.dtbl td{padding:14px 20px;font-size:.875rem;border-bottom:1px solid #e8e6dc;vertical-align:top;color:#141413;line-height:1.55}
 .dtbl tr:last-child td{border-bottom:none}
 .dtbl tr td:first-child{font-weight:600}
-/* stat row */
-.statrow{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:40px 0;border-bottom:1px solid var(--gl)}
-.stat-v{font-size:36px;font-weight:900;letter-spacing:-.04em;line-height:1}
-.stat-l{font-size:12px;color:var(--gray);margin-top:6px;line-height:1.5}
-.stat-d{font-size:11px;font-family:monospace;font-weight:600;margin-top:3px}
-.up{color:#dc2626}.dn{color:#16a34a}
-/* flow */
-.flowbox{display:flex;flex-direction:column;gap:0;border:1px solid var(--gl);border-radius:var(--r);overflow:hidden;background:var(--white)}
-.frow{display:grid;grid-template-columns:44px 1fr auto;align-items:stretch;border-bottom:1px solid var(--ivory-d)}
-.frow:last-child{border-bottom:none}
-.fnum{padding:18px 0 18px 18px;font-size:12px;font-weight:800;font-family:monospace;color:var(--gray);display:flex;align-items:center}
-.fbody{padding:18px 20px;font-size:14px;line-height:1.55;display:flex;flex-direction:column;gap:3px}
-.fbody strong{font-weight:600;font-size:14px}
-.fbody span{font-size:13px;color:var(--gray)}
-.fbadge{padding:18px 20px;display:flex;align-items:center;justify-content:center}
-.badge{padding:4px 12px;border-radius:100px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
-.b-auto{background:#f0faf3;color:#2d7d46}
-.b-rev{background:#fffbeb;color:#b45309}
-.b-exec{background:#eff6ff;color:#1d4ed8}
-/* brief widget */
-.brief{background:var(--white);border:1px solid var(--gl);border-radius:var(--r);padding:36px 32px}
-.brief-hd{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-family:monospace;color:var(--gray);margin-bottom:24px}
-.brief-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding-bottom:28px;border-bottom:1px solid var(--ivory-d);margin-bottom:24px}
-.bm-v{font-size:24px;font-weight:800;letter-spacing:-.03em;line-height:1}
-.bm-l{font-size:12px;color:var(--gray);margin-top:5px;line-height:1.4}
-.bm-d{font-size:11px;font-family:monospace;font-weight:600;margin-top:3px}
-.dec-list{display:flex;flex-direction:column;gap:0}
-.dec{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--ivory-d);font-size:14px}
+.tag{display:inline-block;padding:2px 10px;border-radius:100px;font-family:"JetBrains Mono","Courier New",monospace;font-size:.5625rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+.tag-green{background:#f0faf3;color:#2d7d46}
+.tag-orange{background:#fef9ee;color:#b45309}
+.tag-red{background:#fff5f5;color:#c0392b}
+.tag-blue{background:#eff6ff;color:#1d4ed8}
+.brief{background:#fff;border:1px solid #d1cfc5;border-radius:12px;padding:36px 32px}
+.brief-hd{font-family:"JetBrains Mono","Courier New",monospace;font-size:.625rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#999;margin-bottom:24px}
+.brief-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding-bottom:28px;border-bottom:1px solid #e8e6dc;margin-bottom:24px}
+.bm-v{font-size:1.5rem;font-weight:800;letter-spacing:-.03em;line-height:1;color:#141413}
+.bm-l{font-size:.75rem;color:#5e5d59;margin-top:5px;line-height:1.4}
+.bm-d{font-family:"JetBrains Mono","Courier New",monospace;font-size:.5625rem;font-weight:600;margin-top:3px}
+.bm-up{color:#c0392b}.bm-dn{color:#27ae60}
+.dec-list{display:flex;flex-direction:column}
+.dec{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid #e8e6dc;font-size:.875rem;color:#141413;line-height:1.55}
 .dec:last-child{border-bottom:none}
-.dn2{width:22px;height:22px;border-radius:50%;background:var(--black);color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
-/* cta strip */
-.cta-strip{background:#111;color:#fff;padding:72px 0;text-align:center;margin-top:var(--gap)}
-.cta-strip h2{font-size:clamp(22px,3vw,36px);font-weight:800;letter-spacing:-.03em;margin-bottom:16px}
-.cta-strip p{font-size:15px;color:rgba(255,255,255,.52);margin-bottom:36px}
-.bp{padding:13px 26px;background:var(--white);color:#111;border-radius:9px;font-size:14px;font-weight:600;text-decoration:none;display:inline-block}
-.bs{padding:13px 26px;background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.3);border-radius:9px;font-size:14px;font-weight:500;text-decoration:none;display:inline-block;margin-left:12px}
-.bs:hover{border-color:#fff}
-/* footer */
-footer{background:#1C1C1C;color:#fff;padding:48px 0 36px}
-.fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
-.flo{font-size:17px;font-weight:800;display:block;margin-bottom:12px}
-.ftag{font-size:13px;color:rgba(255,255,255,.4);line-height:1.6;max-width:260px}
-.fc h4{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:14px}
-.fc a{display:block;font-size:13px;color:rgba(255,255,255,.55);text-decoration:none;margin-bottom:8px}
-.fc a:hover{color:#fff}
-.fb{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;display:flex;align-items:center;justify-content:space-between;font-size:12px;color:rgba(255,255,255,.3)}
-.fb a{color:rgba(255,255,255,.5);text-decoration:none}
-.fb a:hover{color:#fff}
-@media(max-width:900px){:root{--gap:64px}.con{padding:0 22px}.nlinks{display:none}.grid2,.grid3,.statrow,.brief-metrics,.fg{grid-template-columns:1fr 1fr}}
-@media(max-width:550px){.grid2,.grid3,.statrow,.brief-metrics,.fg{grid-template-columns:1fr}.frow{grid-template-columns:36px 1fr}}
-</style>
-
-<title>KimQ · AI Agent Kế toán</title>
+.dn2{width:1.375rem;height:1.375rem;border-radius:50%;background:#141413;color:#fff;font-family:"JetBrains Mono","Courier New",monospace;font-size:.5625rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.mini-chart{margin-top:20px;padding:16px;background:#faf9f5;border:1px solid #e8e6dc;border-radius:8px}
+.cta-strip{background:#141413;color:#fff;padding:80px 0;text-align:center}
+.cta-strip h2{font-size:clamp(1.375rem,2.8vw,2rem);font-weight:700;letter-spacing:-.03em;margin-bottom:16px;color:#fff}
+.cta-strip p{font-size:1rem;color:rgba(250,249,245,.55);margin-bottom:36px}
+.bpw{padding:.875rem 1.875rem;background:#fff;color:#141413;border-radius:6px;font-size:.9375rem;font-weight:600;text-decoration:none;display:inline-block;letter-spacing:-.01em}
+.bsw{padding:.875rem 1.75rem;background:transparent;color:#fff;border:1px solid rgba(250,249,245,.3);border-radius:6px;font-size:.9375rem;font-weight:400;text-decoration:none;display:inline-block;margin-left:12px}
+footer{background:#1f1e1d;color:#faf9f5;padding:64px 0 40px}
+.fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px}
+.flo{font-size:1.125rem;font-weight:800;display:block;margin-bottom:12px;color:#faf9f5}
+.ftag{font-size:.875rem;color:rgba(250,249,245,.45);line-height:1.65;max-width:260px}
+.fc h4{font-family:"JetBrains Mono","Courier New",monospace;font-size:.5625rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(250,249,245,.35);margin-bottom:16px}
+.fc a{display:block;font-size:.875rem;color:rgba(250,249,245,.65);text-decoration:none;margin-bottom:8px}
+.fc a:hover{color:#faf9f5}
+.fb{border-top:1px solid rgba(250,249,245,.1);padding-top:24px;display:flex;align-items:center;justify-content:space-between}
+.fc2,.fct{font-family:"JetBrains Mono","Courier New",monospace;font-size:.6875rem;color:rgba(250,249,245,.35)}
+.fct a{color:rgba(250,249,245,.55);text-decoration:none}
+@media(max-width:900px){.con{padding:0 20px}.nlinks{display:none}.grid2,.grid3,.statrow,.brief-metrics,.fg{grid-template-columns:1fr 1fr}.frow{grid-template-columns:2.5rem 1fr}.fbadge{display:none}}
+@media(max-width:550px){.grid2,.grid3,.statrow,.brief-metrics,.fg{grid-template-columns:1fr}}</style>
 </head>
-<body>
-<nav>
+<body><nav>
   <div class="ni">
     <a href="index.html" class="nl"><span class="lm">K</span>KimQ</a>
     <div class="nlinks">
@@ -110,123 +99,180 @@ footer{background:#1C1C1C;color:#fff;padding:48px 0 36px}
       <a href="index.html#usecases">Ứng dụng</a>
       <a href="index.html#roadmap">Lộ trình</a>
     </div>
-    <a href="mailto:contact@kimq.tech" class="ncta">Liên hệ tư vấn →</a>
+    <a href="mailto:contact@kimq.tech" class="ncta">Liên hệ tư vấn</a>
   </div>
 </nav>
-
-<div class="phero">
+<section class="phero">
   <div class="con">
     <p class="kicker">05 / Ứng dụng · Kế toán</p>
-    <h1>AI agent cho đội kế toán — khớp số, đối soát, không bỏ sót</h1>
-    <p class="sub">Agent đọc dữ liệu kế toán thật, khớp hóa đơn tự động, báo cáo khoản treo và soạn nháp để người có thẩm quyền duyệt.</p>
+    <h1>AI agent cho đội kế toán</h1>
+    <p class="sub">Agent tự động đối chiếu sao kê, khớp hóa đơn và báo cáo khoản treo trước giờ làm việc. Kế toán chỉ xem và quyết định.</p>
   </div>
-</div>
-
-<section class="sec">
+</section>
+<section class="sec" style="padding-bottom:0">
   <div class="con">
     <div class="statrow">
-      <div><div class="stat-v">38/41</div><div class="stat-l">giao dịch tự khớp mỗi sáng</div><div class="stat-d dn">tự động · 06:00</div></div>
-      <div><div class="stat-v">14</div><div class="stat-l">hóa đơn phát hành lại sau 1 lần quét</div><div class="stat-d up">→ agent soạn sẵn</div></div>
-      <div><div class="stat-v">0</div><div class="stat-l">nhân sự cần vào sớm để đối soát</div><div class="stat-d dn">tự động hóa hoàn toàn</div></div>
-      <div><div class="stat-v">07:00</div><div class="stat-l">báo cáo khoản treo sẵn sàng</div><div class="stat-d dn">trước giờ làm việc</div></div>
-    </div>
-  </div>
-</section>
-
-<div class="dv"></div>
-
-<section class="sec">
-  <div class="con">
-    <p class="sl">Quy trình agent · Hóa đơn &amp; Công nợ</p>
-    <h2 class="sh">Từ tin nhắn đến hành động — không cần mở hệ thống</h2>
-    <div class="flowbox" style="margin-top:32px">
-      <div class="frow">
-        <div class="fnum">01</div>
-        <div class="fbody"><strong>Kế toán tra hóa đơn</strong><span>Hỏi theo số hóa đơn, tên khách, hoặc khoảng thời gian — agent tra trong dữ liệu đã kết nối</span></div>
-        <div class="fbadge"><span class="badge b-auto">Tự xử lý</span></div>
+      <div>
+        <div class="stat-v">38/41</div>
+        <div class="stat-l">giao dịch tự khớp mỗi ngày</div>
+        <div class="stat-d dn-c">Tự động</div>
       </div>
-      <div class="frow">
-        <div class="fnum">02</div>
-        <div class="fbody"><strong>Khớp công nợ tự động</strong><span>Agent đối chiếu hóa đơn với sao kê ngân hàng, đánh dấu khớp / không khớp / treo</span></div>
-        <div class="fbadge"><span class="badge b-auto">Tự xử lý</span></div>
+      <div>
+        <div class="stat-v">06:00</div>
+        <div class="stat-l">bắt đầu đối soát sao kê</div>
+        <div class="stat-d" style="color:#999">Mỗi sáng</div>
       </div>
-      <div class="frow">
-        <div class="fnum">03</div>
-        <div class="fbody"><strong>Gợi ý bước tiếp theo</strong><span>Với khoản treo: agent chỉ ra nguyên nhân, soạn nháp email nhắc khách, đề xuất bút toán điều chỉnh</span></div>
-        <div class="fbadge"><span class="badge b-rev">Người duyệt</span></div>
+      <div>
+        <div class="stat-v">3</div>
+        <div class="stat-l">khoản treo báo cáo ngay</div>
+        <div class="stat-d up-c">Cần xem</div>
       </div>
-      <div class="frow">
-        <div class="fnum">04</div>
-        <div class="fbody"><strong>Ghi nhật ký tự động</strong><span>Mỗi thao tác được ghi log có dấu thời gian, người xác nhận và kết quả — sẵn sàng cho kiểm toán</span></div>
-        <div class="fbadge"><span class="badge b-auto">Tự xử lý</span></div>
+      <div>
+        <div class="stat-v">0</div>
+        <div class="stat-l">lần bỏ sót deadline</div>
+        <div class="stat-d dn-c">Kỷ lục</div>
       </div>
     </div>
   </div>
 </section>
-
-<div class="dv"></div>
-
 <section class="sec">
   <div class="con">
-    <p class="sl">Demo · Đối soát ngân hàng sáng sớm</p>
-    <h2 class="sh">06:00 — agent chạy trước khi đội ngũ vào làm</h2>
-    <div class="brief" style="margin-top:32px">
-      <div class="brief-hd">AI Reconciliation Agent · Thứ Hai 06:00 · Tự động</div>
-      <div class="brief-metrics">
-        <div><div class="bm-v">41</div><div class="bm-l">Giao dịch cần đối soát</div></div>
-        <div><div class="bm-v">38</div><div class="bm-l">Tự khớp hoàn toàn</div><div class="bm-d dn">92.7%</div></div>
-        <div><div class="bm-v">3</div><div class="bm-l">Khoản treo cần xem xét</div><div class="bm-d up">chuyển kế toán trưởng</div></div>
-        <div><div class="bm-v">06:47</div><div class="bm-l">Hoàn thành lúc</div><div class="bm-d dn">trước 07:00</div></div>
+    <p class="sl">Quy trình · Hằng ngày</p>
+    <h2 class="sh">Từ sao kê đến bản tin trong 1 giờ</h2>
+    <div class="flowbox">
+      <div class="frow">
+        <span class="fnum">01</span>
+        <div class="fbody"><strong>06:00 Agent kết nối sao kê ngân hàng đêm qua</strong><span>Tự động tải dữ liệu từ VCB, Techcombank, BIDV</span></div>
+        <div class="fbadge"><span class="badge b-auto">Tự xử lý</span></div>
       </div>
-      <div style="font-size:13px;font-weight:700;margin-bottom:12px">3 khoản treo cần xác nhận</div>
-      <div class="dec-list">
-        <div class="dec"><div class="dn2">1</div><div>TT-2026-0891 · Công ty TNHH Vận tải Phú An · 48.500.000đ · Sao kê ghi nhận nhưng chưa có hóa đơn đối ứng — đề xuất: liên hệ xác nhận và tạo hóa đơn đầu vào</div></div>
-        <div class="dec"><div class="dn2">2</div><div>TT-2026-0887 · Khách hàng cá nhân · 5.200.000đ · Số tiền chênh lệch 200.000đ so với hóa đơn gốc — đề xuất: kiểm tra phí chuyển khoản ngân hàng</div></div>
-        <div class="dec"><div class="dn2">3</div><div>TT-2026-0884 · Công ty CP Thương mại Á Đông · 120.000.000đ · Thanh toán chia 2 lần, lần 2 chưa về — đề xuất: kiểm tra lịch thanh toán hợp đồng</div></div>
+      <div class="frow">
+        <span class="fnum">02</span>
+        <div class="fbody"><strong>Agent khớp từng giao dịch với hóa đơn trong hệ thống</strong><span>So sánh số tiền, ngày, mã tham chiếu</span></div>
+        <div class="fbadge"><span class="badge b-auto">Tự xử lý</span></div>
+      </div>
+      <div class="frow">
+        <span class="fnum">03</span>
+        <div class="fbody"><strong>38 giao dịch khớp tự động, ghi nhật ký kiểm toán</strong><span>Ghi timestamp và nguồn dữ liệu</span></div>
+        <div class="fbadge"><span class="badge b-auto">Tự xử lý</span></div>
+      </div>
+      <div class="frow">
+        <span class="fnum">04</span>
+        <div class="fbody"><strong>3 khoản không khớp: phân loại và soạn câu hỏi</strong><span>Kèm bằng chứng cụ thể cho từng khoản</span></div>
+        <div class="fbadge"><span class="badge b-rev">Cần xác nhận</span></div>
+      </div>
+      <div class="frow">
+        <span class="fnum">05</span>
+        <div class="fbody"><strong>Kế toán nhận danh sách khoản treo lúc 07:00, xác nhận 2 khoản</strong><span>Thao tác trong 2 click</span></div>
+        <div class="fbadge"><span class="badge b-exec">Người duyệt</span></div>
+      </div>
+      <div class="frow">
+        <span class="fnum">06</span>
+        <div class="fbody"><strong>1 khoản treo chuyển kế toán trưởng kèm bằng chứng đầy đủ</strong><span>Báo cáo tự động soạn sẵn</span></div>
+        <div class="fbadge"><span class="badge b-exec">Người duyệt</span></div>
       </div>
     </div>
   </div>
 </section>
-
-<div class="dv"></div>
-
-<section class="sec">
+<section class="sec" style="background:#f5f4f0;padding:80px 0">
   <div class="con">
-    <p class="sl">Agent tự làm / Người duyệt</p>
-    <h2 class="sh">Phân quyền rõ ràng — agent không tự ý sửa sổ sách</h2>
-    <div class="grid2" style="margin-top:32px">
+    <p class="sl">Use case · Chi tiết</p>
+    <h2 class="sh">Hai agent chạy song song</h2>
+    <div class="grid2">
       <div class="card">
-        <div class="card-tag" style="display:flex;align-items:center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px;flex-shrink:0"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>Agent tự làm</div>
-        <div class="card-t">Không cần người can thiệp</div>
-        <p class="card-d">Tra cứu hóa đơn, khớp giao dịch, phân loại khoản treo, soạn email nhắc, ghi log thao tác, tổng hợp báo cáo sáng.</p>
-      </div>
-      <div class="card">
-        <div class="card-tag" style="display:flex;align-items:center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px;flex-shrink:0"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></svg>Người duyệt</div>
-        <div class="card-t">Quyết định vẫn là người</div>
-        <p class="card-d">Phê duyệt bút toán điều chỉnh, xác nhận hóa đơn phát hành lại, ký off khoản treo đã xử lý, duyệt báo cáo tháng.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="cta-strip">
-  <div class="con">
-    <h2>Bắt đầu với một nghiệp vụ kế toán cụ thể</h2>
-    <p>Chúng tôi khảo sát quy trình thực tế, kết nối dữ liệu đang có và chạy thật trong tuần đầu.</p>
-    <a href="mailto:contact@kimq.tech" class="bp">Liên hệ tư vấn</a>
-    <a href="index.html" class="bs">Về trang chủ</a>
-  </div>
+        <p class="card-tag">AI Invoice / AP Agent</p>
+        <p class="card-t">Xử lý hóa đơn và công nợ</p>
+        <p class="card-d">Agent tra hóa đơn, khớp công nợ, gợi ý bước tiếp theo và soạn nháp. Kế toán kiểm tra khoản treo, không cần nhập liệu lại.</p>
+        <div class="card-hl">41 giao dịch · 38 tự khớp · 3 khoản treo báo cáo</div>
+        <div class="mini-chart">
+  <svg viewBox="0 0 200 72" width="100%" height="72">
+    <line x1="0" y1="56" x2="200" y2="56" stroke="#e8e6dc" stroke-width="1"/>
+    <rect x="12" y="10" width="60" height="46" rx="4" fill="#4a7c59" opacity=".85"/>
+    <text x="42" y="7" text-anchor="middle" font-family="Be Vietnam Pro,sans-serif" font-size="9" font-weight="700" fill="#4a7c59">38</text>
+    <text x="42" y="68" text-anchor="middle" font-family="Be Vietnam Pro,sans-serif" font-size="8" fill="#888">Tự khớp</text>
+    <rect x="82" y="46" width="40" height="10" rx="4" fill="#d97757" opacity=".85"/>
+    <text x="102" y="43" text-anchor="middle" font-family="Be Vietnam Pro,sans-serif" font-size="9" font-weight="700" fill="#d97757">3</text>
+    <text x="102" y="68" text-anchor="middle" font-family="Be Vietnam Pro,sans-serif" font-size="8" fill="#888">Treo</text>
+    <text x="160" y="36" text-anchor="middle" font-family="Be Vietnam Pro,sans-serif" font-size="20" font-weight="800" fill="#141413">41</text>
+    <text x="160" y="52" text-anchor="middle" font-family="Be Vietnam Pro,sans-serif" font-size="9" fill="#999">tổng</text>
+  </svg>
 </div>
-
-<footer>
+      </div>
+      <div class="card">
+        <p class="card-tag">AI Reconciliation Agent</p>
+        <p class="card-t">Đối soát ngân hàng hằng ngày</p>
+        <p class="card-d">06:00 sáng, agent đối chiếu sao kê đêm qua, phân loại giao dịch và báo cáo khoản treo trước giờ làm việc.</p>
+        <div class="card-hl">Báo cáo hoàn tất trước 07:00 · Không cần nhân sự vào sớm</div>
+        <div class="mini-chart">
+  <svg viewBox="0 0 200 56" width="100%" height="56">
+    <path d="M0,44 C30,40 60,36 90,28 C120,20 150,16 200,8" stroke="#d97757" stroke-width="1.5" fill="none"/>
+    <circle cx="200" cy="8" r="3" fill="#d97757"/>
+    <text x="4" y="52" font-family="JetBrains Mono,monospace" font-size="8" fill="#bbb">Tuần trước</text>
+    <text x="156" y="52" font-family="JetBrains Mono,monospace" font-size="8" fill="#d97757">Hôm nay</text>
+  </svg>
+</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="sec">
+  <div class="con">
+    <p class="sl">Dữ liệu · Phân loại</p>
+    <h2 class="sh">Phân loại giao dịch theo agent</h2>
+    <table class="dtbl">
+      <thead><tr><th>Loại giao dịch</th><th>Trạng thái</th><th>Xử lý bởi</th><th>Thời gian</th></tr></thead>
+      <tbody>
+        <tr><td>Thanh toán nhà cung cấp</td><td><span class="tag tag-green">Khớp tự động</span></td><td>Agent</td><td>2 giây</td></tr>
+        <tr><td>Hoàn tiền khách hàng</td><td><span class="tag tag-green">Khớp tự động</span></td><td>Agent</td><td>2 giây</td></tr>
+        <tr><td>Phí ngân hàng</td><td><span class="tag tag-green">Phân loại tự động</span></td><td>Agent</td><td>2 giây</td></tr>
+        <tr><td>Giao dịch chưa có hóa đơn</td><td><span class="tag tag-orange">Cần xác nhận</span></td><td>Kế toán</td><td>5 phút</td></tr>
+        <tr><td>Giao dịch trùng số tiền</td><td><span class="tag tag-red">Chuyển kế toán trưởng</span></td><td>Kế toán trưởng</td><td>15 phút</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<section class="sec" style="background:#f5f4f0;padding:80px 0">
+  <div class="con">
+    <p class="sl">Bản tin · 07:00 sáng</p>
+    <h2 class="sh">Báo cáo điều hành kế toán</h2>
+    <div class="brief">
+      <div class="brief-hd">Bản tin kế toán · Thứ Hai 07:00 · Tự động</div>
+      <div class="brief-metrics">
+        <div><div class="bm-v">21,4 tỷ</div><div class="bm-l">Chi phí vận hành</div><div class="bm-d bm-up">Tăng 7%</div></div>
+        <div><div class="bm-v">3,6 tỷ</div><div class="bm-l">Công nợ quá hạn</div><div class="bm-d bm-up">Tăng 28%</div></div>
+        <div><div class="bm-v">38</div><div class="bm-l">Giao dịch khớp</div><div class="bm-d bm-dn">Tự động</div></div>
+        <div><div class="bm-v">3</div><div class="bm-l">Khoản treo</div><div class="bm-d bm-up">Cần xem</div></div>
+      </div>
+      <div class="dec-list">
+        <div class="dec"><span class="dn2">1</span><span>Phát hành lại 14 hóa đơn: agent đã xác định nguyên nhân và soạn sẵn nội dung</span></div>
+        <div class="dec"><span class="dn2">2</span><span>Phê duyệt phí lưu bãi 100 triệu: lô hàng thông quan chậm, hãng tàu đề nghị gia hạn</span></div>
+        <div class="dec"><span class="dn2">3</span><span>Xác nhận chuyển khoản treo 85 triệu từ VCB chưa khớp với hóa đơn nào</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="cta-strip">
+  <div class="con">
+    <h2>Xem AI agent kế toán chạy thật</h2>
+    <p>Bắt đầu từ nghiệp vụ đối soát. Chúng tôi kết nối, chạy thử và bàn giao trong tuần đầu.</p>
+    <a href="mailto:contact@kimq.tech" class="bpw">Đặt lịch trao đổi</a>
+    <a href="index.html" class="bsw">Về trang chủ</a>
+  </div>
+</section><footer>
   <div class="con">
     <div class="fg">
-      <div><span class="flo">KimQ</span><p class="ftag">AI agent cho doanh nghiệp — kế toán, logistics, tài chính, nhân sự.</p></div>
-      <div class="fc"><h4>Ứng dụng</h4><a href="ke-toan.html">Kế toán</a><a href="logistics.html">Logistics</a><a href="tai-chinh.html">Tài chính</a><a href="nhan-su.html">Nhân sự</a></div>
+      <div>
+        <span class="flo">KimQ</span>
+        <p class="ftag">Studio sản phẩm số tại Việt Nam. Xây dựng AI agent chạy ngay trên dữ liệu và quy trình doanh nghiệp đang có.</p>
+      </div>
       <div class="fc"><h4>Sản phẩm</h4><a href="index.html#products">KimQ Work</a><a href="index.html#products">KimQ Insight</a><a href="index.html#products">KimQ Flow</a></div>
-      <div class="fc"><h4>Công ty</h4><a href="index.html#about">Về KimQ</a><a href="mailto:contact@kimq.tech">Liên hệ</a></div>
+      <div class="fc"><h4>Ứng dụng</h4><a href="ke-toan.html">Kế toán</a><a href="logistics.html">Logistics</a><a href="tai-chinh.html">Tài chính</a><a href="nhan-su.html">Nhân sự</a></div>
+      <div class="fc"><h4>Công ty</h4><a href="index.html#about">Về KimQ</a><a href="index.html#roadmap">Lộ trình</a><a href="mailto:contact@kimq.tech">Liên hệ</a></div>
     </div>
-    <div class="fb"><span>© 2026 KimQ</span><a href="mailto:contact@kimq.tech">contact@kimq.tech</a></div>
+    <div class="fb">
+      <span class="fc2">&copy; 2026 KimQ. All rights reserved.</span>
+      <span class="fct"><a href="mailto:contact@kimq.tech">contact@kimq.tech</a></span>
+    </div>
   </div>
 </footer>
-</body></html>
+</body>
+</html>
