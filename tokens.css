@@ -1,13 +1,7 @@
-@font-face{font-family:"Anthropic Sans";src:url("fonts/AnthropicSans-Roman.woff2") format("woff2");font-weight:300 800;font-style:normal;font-display:swap}
-@font-face{font-family:"Anthropic Sans";src:url("fonts/AnthropicSans-Italic.woff2") format("woff2");font-weight:300 800;font-style:italic;font-display:swap}
-@font-face{font-family:"Anthropic Serif";src:url("fonts/AnthropicSerif-Roman.woff2") format("woff2");font-weight:300 800;font-style:normal;font-display:swap}
-@font-face{font-family:"Anthropic Serif";src:url("fonts/AnthropicSerif-Italic.woff2") format("woff2");font-weight:300 800;font-style:italic;font-display:swap}
-@font-face{font-family:"Anthropic Mono";src:url("fonts/AnthropicMono-Roman.woff2") format("woff2");font-weight:300 800;font-style:normal;font-display:block}
-@font-face{font-family:"Anthropic Mono";src:url("fonts/AnthropicMono-Italic.woff2") format("woff2");font-weight:300 800;font-style:italic;font-display:block}
 :root{
---font-sans:"Anthropic Sans",Arial,sans-serif;
---font-serif:"Anthropic Serif",Georgia,serif;
---font-mono:"Anthropic Mono","Courier New",monospace;
+--font-sans:"Be Vietnam Pro",system-ui,sans-serif;
+--font-serif:"Be Vietnam Pro",system-ui,sans-serif;
+--font-mono:"JetBrains Mono","Courier New",monospace;
 --text-xxxl:6rem;--text-xxl:4.5rem;--text-xl:4rem;--text-l:3rem;
 --text-m:2rem;--text-s:1.5rem;--text-xs:1.25rem;
 --para-l:1.5rem;--para-m:1.25rem;--para-s:1.125rem;--para-xs:1rem;
