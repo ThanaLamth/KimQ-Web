@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KimQ x Doanh nghiep - AI-native software</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Inter",system-ui,sans-serif;background:#F5F0E8;color:#111;line-height:1.6;-webkit-font-smoothing:antialiased}
+:root{--ivory:#F5F0E8;--ivory-d:#EDE8DF;--black:#111;--gray:#6B6B6B;--gl:#D4CFC7;--white:#fff;--r:12px;--nh:64px;--gap:110px;--mw:1200px}
+.con{max-width:var(--mw);margin:0 auto;padding:0 40px}
+.pill{display:inline-block;padding:4px 14px;border:1px solid var(--gl);border-radius:100px;font-size:12px;color:var(--gray)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:var(--nh);background:rgba(245,240,232,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--gl);display:flex;align-items:center}
+.ni{display:flex;align-items:center;width:100%;max-width:var(--mw);margin:0 auto;padding:0 40px}
+.nl{font-size:18px;font-weight:800;letter-spacing:-.03em;color:var(--black);text-decoration:none;margin-right:auto;display:flex;align-items:center;gap:8px}
+.lm{width:30px;height:30px;background:var(--black);border-radius:7px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:15px;font-weight:900;flex-shrink:0}
+.nlinks{display:flex;gap:28px}
+.nlinks a{font-size:14px;color:var(--black);text-decoration:none;opacity:.65;transition:opacity .2s}
+.nlinks a:hover{opacity:1}
+.ncta{margin-left:28px;padding:9px 22px;background:var(--black);color:#fff;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none;white-space:nowrap;transition:opacity .2s}
+.ncta:hover{opacity:.82}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding-top:var(--nh);position:relative;overflow:hidden}
+.hn{position:absolute;inset:0;background:radial-gradient(ellipse 90% 70% at 65% 35%,rgba(0,0,0,.035),transparent 65%);pointer-events:none}
+.hi{position:relative;z-index:1;padding:88px 0 104px}
+.hk{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray);font-family:monospace;margin-bottom:26px}
+.hh{font-size:clamp(38px,5.5vw,74px);font-weight:800;letter-spacing:-.04em;line-height:1.06;max-width:840px;margin-bottom:30px}
+.word{display:inline-block;opacity:0;transform:translateY(14px);animation:wIn .5s ease forwards}
+@keyframes wIn{to{opacity:1;transform:translateY(0)}}
+.hsub{font-size:18px;color:var(--gray);max-width:500px;line-height:1.7;margin-bottom:46px}
+.hbtns{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.bp{padding:14px 28px;background:var(--black);color:#fff;border-radius:10px;font-size:15px;font-weight:600;text-decoration:none;display:inline-block;transition:opacity .2s}
+.bp:hover{opacity:.83}
+.bs{padding:14px 28px;background:transparent;color:var(--black);border:1.5px solid var(--gl);border-radius:10px;font-size:15px;font-weight:500;text-decoration:none;display:inline-block;transition:border-color .2s}
+.bs:hover{border-color:var(--black)}
+.htags{display:flex;gap:10px;flex-wrap:wrap;margin-top:56px}
+.dv{height:1px;background:var(--gl)}
+.sec{padding:var(--gap) 0}
+.sl{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray);font-family:monospace;margin-bottom:14px}
+.sh{font-size:clamp(26px,3.2vw,44px);font-weight:700;letter-spacing:-.03em;line-height:1.14;max-width:620px;margin-bottom:18px}
+.sp{font-size:16px;color:var(--gray);max-width:500px;line-height:1.72;margin-bottom:52px}
+.astrip{background:var(--ivory-d);border-top:1px solid var(--gl);border-bottom:1px solid var(--gl);padding:64px 0}
+.sgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-bottom:40px}
+.snum{font-size:46px;font-weight:900;letter-spacing:-.04em;line-height:1}
+.slbl{font-size:13px;color:var(--gray);margin-top:8px;line-height:1.5}
+.clients{display:flex;flex-wrap:wrap;gap:10px}
+.ctag{padding:7px 18px;border:1px solid var(--gl);border-radius:100px;font-size:13px;font-weight:600;background:var(--white)}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.pcard{background:var(--white);border:1px solid var(--gl);border-radius:var(--r);padding:36px 30px;display:flex;flex-direction:column;gap:14px;transition:box-shadow .25s,transform .25s}
+.pcard:hover{box-shadow:0 12px 40px rgba(0,0,0,.08);transform:translateY(-2px)}
+.pno{font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;font-family:monospace;color:var(--gray)}
+.pico{font-size:26px;line-height:1}
+.pname{font-size:22px;font-weight:700;letter-spacing:-.02em}
+.pdesc{font-size:14px;color:var(--gray);line-height:1.65}
+.pfoot{margin-top:auto;padding-top:18px;border-top:1px solid var(--ivory-d);font-size:12px;color:var(--gray)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.ctbl{width:100%;border-collapse:collapse;margin-top:22px}
+.ctbl th{text-align:left;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gray);padding:10px 0;border-bottom:1px solid var(--gl)}
+.ctbl td{padding:13px 0;font-size:14px;border-bottom:1px solid var(--ivory-d);vertical-align:top}
+.ctbl tr td:first-child{color:var(--gray);padding-right:20px;width:30%}
+.bbold{display:inline-block;padding:2px 9px;background:var(--ivory-d);border-radius:4px;font-size:11px;color:var(--gray);margin-bottom:3px}
+.bnew{display:inline-block;padding:2px 9px;background:var(--black);color:#fff;border-radius:4px;font-size:11px;margin-bottom:3px}
+.flow{display:flex;flex-direction:column;gap:18px;margin-top:22px}
+.fr{display:flex;gap:18px;align-items:flex-start}
+.fn{width:34px;height:34px;border-radius:50%;background:var(--black);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;margin-top:2px}
+.ft{font-size:15px;font-weight:600;margin-bottom:4px}
+.fd{font-size:13px;color:var(--gray);line-height:1.6}
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.tcard{border:1px solid var(--gl);border-radius:var(--r);padding:30px 26px;background:var(--white)}
+.tico{font-size:22px;margin-bottom:14px}
+.tt{font-size:16px;font-weight:700;margin-bottom:10px}
+.tul{list-style:none}
+.tul li{font-size:13px;color:var(--gray);padding:6px 0;border-bottom:1px solid var(--ivory-d);display:flex;gap:8px;align-items:baseline}
+.tul li:last-child{border-bottom:none}
+.utabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:38px}
+.tb{padding:8px 18px;border-radius:100px;border:1.5px solid var(--gl);background:transparent;font-size:13px;font-weight:600;cursor:pointer;color:var(--gray);transition:all .2s;font-family:inherit}
+.tb.act,.tb:hover{background:var(--black);color:#fff;border-color:var(--black)}
+.up{display:none}
+.up.act{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.uc{background:var(--white);border:1px solid var(--gl);border-radius:var(--r);padding:28px 24px}
+.utag{font-size:11px;color:var(--gray);font-family:monospace;letter-spacing:.05em;text-transform:uppercase;margin-bottom:12px}
+.uct{font-size:17px;font-weight:700;margin-bottom:10px}
+.ucd{font-size:13px;color:var(--gray);line-height:1.65}
+.uhl{background:var(--ivory-d);border-radius:8px;padding:12px 15px;margin-top:13px;font-size:13px;font-weight:500}
+.pbg{background:var(--ivory-d);border-top:1px solid var(--gl);border-bottom:1px solid var(--gl)}
+.pgrd{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.prc{background:var(--white);border:1px solid var(--gl);border-radius:var(--r);padding:26px 22px;font-size:14px}
+.pra{font-size:11px;font-family:monospace;font-weight:700;text-transform:uppercase;color:var(--gray);margin-bottom:12px;letter-spacing:.05em}
+.tl{border:1px solid var(--gl);border-radius:var(--r);overflow:hidden;background:var(--white)}
+.tlr{display:grid;grid-template-columns:90px 1fr 190px;align-items:stretch;border-bottom:1px solid var(--ivory-d)}
+.tlr:last-child{border-bottom:none}
+.tlt{padding:18px 22px;font-size:12px;font-weight:700;font-family:monospace;color:var(--gray);border-right:1px solid var(--ivory-d);display:flex;align-items:center}
+.tla{padding:18px 22px;font-size:14px;line-height:1.55;display:flex;align-items:center}
+.tls{padding:18px 20px;font-size:11px;font-weight:700;border-left:1px solid var(--ivory-d);display:flex;align-items:center;justify-content:center;text-align:center;letter-spacing:.04em;text-transform:uppercase}
+.sa{color:#2d7d46;background:#f0faf3}.sr{color:#b45309;background:#fffbeb}.se{color:#1d4ed8;background:#eff6ff}
+.bc{background:var(--white);border:1px solid var(--gl);border-radius:var(--r);padding:40px 36px}
+.btl{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-family:monospace;color:var(--gray);margin-bottom:26px}
+.mg{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-bottom:34px;padding-bottom:34px;border-bottom:1px solid var(--ivory-d)}
+.mv{font-size:26px;font-weight:800;letter-spacing:-.03em;line-height:1}
+.mlbl{font-size:12px;color:var(--gray);margin-top:6px;line-height:1.4}
+.md{font-size:11px;font-family:monospace;font-weight:600;margin-top:4px}
+.du{color:#dc2626}.dd{color:#16a34a}
+.dh{font-size:14px;font-weight:700;margin-bottom:14px}
+.dr{display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-bottom:1px solid var(--ivory-d);font-size:14px}
+.dr:last-child{border-bottom:none}
+.dn{width:24px;height:24px;border-radius:50%;background:var(--black);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.rg{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.rcard{background:var(--white);border:1px solid var(--gl);border-radius:var(--r);padding:26px 22px}
+.rno{font-size:11px;font-weight:700;letter-spacing:.07em;font-family:monospace;color:var(--gray);margin-bottom:12px}
+.rt{font-size:16px;font-weight:700;margin-bottom:8px}
+.rd{font-size:13px;color:var(--gray);line-height:1.6}
+.ctas{background:var(--black);color:#fff;padding:96px 0;text-align:center}
+footer{background:#1C1C1C;color:#fff;padding:64px 0 48px}
+.fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:52px}
+.flo{font-size:18px;font-weight:800;letter-spacing:-.03em;display:block;margin-bottom:14px}
+.ftag{font-size:13px;color:rgba(255,255,255,.42);line-height:1.65;max-width:280px}
+.fc h4{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.32);margin-bottom:16px}
+.fc a{display:block;font-size:13px;color:rgba(255,255,255,.58);text-decoration:none;margin-bottom:9px;transition:color .2s}
+.fc a:hover{color:#fff}
+.fb{border-top:1px solid rgba(255,255,255,.08);padding-top:26px;display:flex;align-items:center;justify-content:space-between}
+.fc2,.fct{font-size:13px;color:rgba(255,255,255,.32)}
+.fct a{color:rgba(255,255,255,.52);text-decoration:none}
+.fct a:hover{color:#fff}
+.ar{display:flex;flex-wrap:wrap;gap:10px;margin-top:36px}
+@media(max-width:900px){:root{--gap:72px}.con{padding:0 22px}.nlinks{display:none}.sgrid,.pgrid,.tgrid,.rg,.fg{grid-template-columns:1fr 1fr}.split,.up.act,.mg{grid-template-columns:1fr}.tlr{grid-template-columns:80px 1fr}.tls{display:none}}
+@media(max-width:550px){.sgrid,.rg,.fg{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="ni">
+    <a href="index.html" class="nl"><span class="lm">K</span>KimQ</a>
+    <div class="nlinks">
+      <a href="#about">Về KimQ</a>
+      <a href="#products">Sản phẩm AI</a>
+      <a href="#usecases">Ứng dụng</a>
+      <a href="#roadmap">Lộ trình</a>
+    </div>
+    <a href="mailto:contact@kimq.tech" class="ncta">Liên hệ tư vấn →</a>
+  </div>
+</nav>
+<section class="hero">
+  <div class="hn"></div>
+  <div class="con">
+    <div class="hi">
+      <p class="hk">KimQ × Doanh nghiệp · AI-native software</p>
+      <h1 class="hh" id="hero-h1">Từ dữ liệu đến quyết định — không chờ báo cáo, không họp để hỏi số</h1>
+      <p class="hsub">KimQ xây dựng AI agent chạy trên hạ tầng doanh nghiệp đang có. Agent đọc dữ liệu thật, chỉ ra vấn đề và chuyển đúng việc đến đúng người.</p>
+      <div class="hbtns">
+        <a href="mailto:contact@kimq.tech" class="bp">Đặt lịch trao đổi</a>
+        <a href="#products" class="bs">Khám phá sản phẩm</a>
+      </div>
+      <div class="htags">
+        <span class="pill">Kế toán</span>
+        <span class="pill">Logistics</span>
+        <span class="pill">Tài chính – Ngân hàng</span>
+        <span class="pill">Nhân sự</span>
+        <span class="pill">AI agent</span>
+        <span class="pill">Dashboard có giải thích</span>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="dv"></div>
+<div class="astrip" id="about">
+  <div class="con">
+    <div style="margin-bottom:36px">
+      <p class="sl">01 / Về KimQ</p>
+      <h2 class="sh">Studio sản phẩm số tại Việt Nam</h2>
+    </div>
+    <div class="sgrid">
+      <div><div class="snum">15+</div><div class="slbl">năm kinh nghiệm xây dựng và vận hành sản phẩm số</div></div>
+      <div><div class="snum">500K+</div><div class="slbl">người dùng trên các hệ thống do KimQ phát triển</div></div>
+      <div><div class="snum">4</div><div class="slbl">lĩnh vực đã triển khai: Sản xuất, Phòng TN, Giải trí, Giáo dục</div></div>
+      <div><div class="snum">5</div><div class="slbl">khách hàng tiêu biểu: Metub, VuiHoc, Azota, VINA QC, VinMake</div></div>
+    </div>
+    <p style="font-size:12px;color:var(--gray);margin-bottom:12px;font-family:monospace;text-transform:uppercase;letter-spacing:.06em">Khách hàng tiêu biểu</p>
+    <div class="clients">
+      <span class="ctag">Metub</span>
+      <span class="ctag">VuiHoc.vn</span>
+      <span class="ctag">Azota</span>
+      <span class="ctag">VINA QC</span>
+      <span class="ctag">VinMake</span>
+    </div>
+  </div>
+</div>
+<section class="sec" id="products">
+  <div class="con">
+    <p class="sl">02 / KimQ AI</p>
+    <h2 class="sh">Ba sản phẩm AI trên một nền tảng dữ liệu chung</h2>
+    <p class="sp">Đưa AI vào vận hành doanh nghiệp, dựa trên chính dữ liệu doanh nghiệp đang có.</p>
+    <div class="pgrid">
+      <div class="pcard">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start">
+          <span class="pno">01 · Work</span><span class="pico">💬</span>
+        </div>
+        <div class="pname">Trợ lý trên Zalo</div>
+        <p class="pdesc">Tra quy chế, làm theo quy trình, cập nhật tiến độ bằng tin nhắn Zalo. Nhân viên hỏi — agent trả lời có nguồn. Quản lý nhận bản tổng hợp vấn đề và người phụ trách.</p>
+        <div class="pfoot">Tích hợp Zalo · Nhớ ngữ cảnh qua nhiều cuộc trò chuyện</div>
+      </div>
+      <div class="pcard">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start">
+          <span class="pno">02 · Insight</span><span class="pico">📊</span>
+        </div>
+        <div class="pname">Dashboard có giải thích</div>
+        <p class="pdesc">Gộp số liệu bán hàng, marketing, kế toán, vận hành. AI giải thích tại sao số liệu thay đổi, chỉ nguyên nhân và đề xuất bước tiếp theo — không chỉ hiển thị con số.</p>
+        <div class="pfoot">Đa nguồn dữ liệu · Giải thích tự động · Bản tin sáng</div>
+      </div>
+      <div class="pcard">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start">
+          <span class="pno">03 · Flow</span><span class="pico">🔄</span>
+        </div>
+        <div class="pname">Phối hợp liên phòng</div>
+        <p class="pdesc">Theo dõi công việc giữa các phòng ban, phê duyệt theo quy trình, nhắc đúng người khi quá hạn. Agent điều phối — người ra quyết định khi vượt phạm vi quyền.</p>
+        <div class="pfoot">Phê duyệt đúng cấp · Nhắc hạn · Liên phòng ban</div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="dv"></div>
+<section class="sec">
+  <div class="con">
+    <div class="split">
+      <div>
+        <p class="sl">03 / Cách tiếp cận</p>
+        <h2 class="sh">Xây dựng "đồng nghiệp AI", không phải phần mềm truyền thống</h2>
+        <table class="ctbl">
+          <thead><tr>
+            <th>Tiêu chí</th>
+            <th><span class="bbold">Truyền thống</span></th>
+            <th><span class="bnew">AI-native KimQ</span></th>
+          </tr></thead>
+          <tbody>
+            <tr><td>Bắt đầu</td><td>Viết đặc tả dài</td><td>Bắt đầu nhỏ, dùng thật ngay</td></tr>
+            <tr><td>Thời gian</td><td>Mất nhiều tháng</td><td>Chạy thật trong tuần đầu</td></tr>
+            <tr><td>Tích hợp</td><td>Nhập liệu lại, đào tạo</td><td>Dùng Zalo &amp; Excel sẵn có</td></tr>
+            <tr><td>Chi phí</td><td>Cố định, trả trước</td><td>Trả theo phạm vi, không server riêng</td></tr>
+            <tr><td>Đầu ra</td><td>Báo cáo thủ công</td><td>Việc cần quyết, có bằng chứng</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <h3 style="font-size:18px;font-weight:700;letter-spacing:-.02em;margin-bottom:24px;margin-top:48px">Quy trình một câu hỏi của lãnh đạo</h3>
+        <div class="flow">
+          <div class="fr"><div class="fn">1</div><div><div class="ft">Câu hỏi của quản lý</div><div class="fd">Lãnh đạo đặt câu hỏi qua Zalo hoặc dashboard — không cần gõ vào hệ thống mới.</div></div></div>
+          <div class="fr"><div class="fn">2</div><div><div class="ft">Agent đọc dữ liệu sẵn có</div><div class="fd">Kết nối trực tiếp Excel, ERP, phần mềm kế toán — không yêu cầu di chuyển dữ liệu.</div></div></div>
+          <div class="fr"><div class="fn">3</div><div><div class="ft">Vấn đề · Nguyên nhân · Đề xuất</div><div class="fd">Agent trả về ba lớp: con số, lý do và đề xuất hành động kèm bằng chứng.</div></div></div>
+          <div class="fr"><div class="fn">4</div><div><div class="ft">Giám đốc quyết định</div><div class="fd">Người ra quyết định — agent thực thi trong phạm vi đã duyệt, chuyển lên cấp khi vượt quyền.</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="dv"></div>
+<section class="sec">
+  <div class="con">
+    <p class="sl">04 / Triển khai an toàn</p>
+    <h2 class="sh">Chi phí gắn với kết quả, rủi ro được kiểm soát</h2>
+    <p class="sp">Ba vùng phân quyền rõ ràng để bắt đầu nhỏ và mở rộng an toàn.</p>
+    <div class="tgrid">
+      <div class="tcard">
+        <div class="tico">⚡</div>
+        <div class="tt">Agent tự làm</div>
+        <ul class="tul">
+          <li><span>Tra cứu tồn kho, giá, quy chế</span></li>
+          <li><span>Nhắc hạn thời gian, lịch</span></li>
+          <li><span>Soạn nháp báo giá, PO, hợp đồng</span></li>
+          <li><span>Khớp hóa đơn tự động</span></li>
+          <li><span>Đối chiếu sao kê ngân hàng</span></li>
+        </ul>
+      </div>
+      <div class="tcard">
+        <div class="tico">👤</div>
+        <div class="tt">Agent đề xuất — người duyệt</div>
+        <ul class="tul">
+          <li><span>Chiết khấu vượt phân quyền</span></li>
+          <li><span>Đặt hàng ngoài hạn mức</span></li>
+          <li><span>Ký / gia hạn hợp đồng lao động</span></li>
+          <li><span>Phê duyệt tín dụng</span></li>
+          <li><span>Quyết định vượt ngưỡng</span></li>
+        </ul>
+      </div>
+      <div class="tcard">
+        <div class="tico">🔒</div>
+        <div class="tt">Agent không làm</div>
+        <ul class="tul">
+          <li><span>Trả lời ngoài nguồn đã duyệt</span></li>
+          <li><span>Tự sửa dữ liệu kế toán</span></li>
+          <li><span>Chia sẻ dữ liệu ngoài phạm vi quyền</span></li>
+          <li><span>Phê duyệt tín dụng tự động</span></li>
+          <li><span>Kết luận gian lận không có người xét</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="dv"></div>
+<section class="sec" id="usecases">
+  <div class="con">
+    <p class="sl">05 / Ứng dụng theo ngành</p>
+    <h2 class="sh">AI agent cho từng đội ngũ</h2>
+    <p class="sp">Kế toán · Logistics · Tài chính – Ngân hàng · Nhân sự</p>
+    <div class="utabs">
+      <button class="tb act" onclick="switchTab(event,'ketoan')">Kế toán</button>
+      <button class="tb" onclick="switchTab(event,'logistics')">Logistics</button>
+      <button class="tb" onclick="switchTab(event,'taichinh')">Tài chính – Ngân hàng</button>
+      <button class="tb" onclick="switchTab(event,'nhansu')">Nhân sự</button>
+    </div>
+    <div id="p-ketoan" class="up act">
+      <div class="uc">
+        <div class="utag">AI Invoice / AP Agent</div>
+        <div class="uct">Xử lý hóa đơn &amp; công nợ</div>
+        <p class="ucd">Agent tra hóa đơn, khớp công nợ, gợi ý bước tiếp theo và soạn nháp — ghi nhật ký tự động.</p>
+        <div class="uhl">41 giao dịch → 38 tự khớp · 3 khoản treo chuyển kế toán trưởng</div>
+        <a href="ke-toan.html" style="display:inline-block;margin-top:14px;font-size:13px;font-weight:600;color:#111;text-decoration:none;border-bottom:1px solid #D4CFC7">Xem chi tiết →</a>
+      </div>
+      <div class="uc">
+        <div class="utag">AI Reconciliation Agent</div>
+        <div class="uct">Đối soát ngân hàng hằng ngày</div>
+        <p class="ucd">06:00 sáng, agent đối chiếu sao kê ngân hàng đêm qua, phân loại giao dịch, báo cáo khoản treo — không cần nhân sự vào sớm.</p>
+        <div class="uhl">06:00 · Đối chiếu tự động · Báo cáo trước 07:00</div>
+        <a href="ke-toan.html" style="display:inline-block;margin-top:14px;font-size:13px;font-weight:600;color:#111;text-decoration:none;border-bottom:1px solid #D4CFC7">Xem chi tiết →</a>
+      </div>
+    </div>
+    <div id="p-logistics" class="up">
+      <div class="uc">
+        <div class="utag">AI Logistics Document Agent</div>
+        <div class="uct">Hồ sơ thông quan &amp; vận chuyển</div>
+        <p class="ucd">Agent theo dõi hồ sơ thông quan, nhắc hạn, đối chiếu với hãng vận chuyển và soạn nháp chứng từ.</p>
+        <div class="uhl">Thời gian thông quan: 5,8 ngày · Cảnh báo khi tăng 2,1 ngày</div>
+        <a href="logistics.html" style="display:inline-block;margin-top:14px;font-size:13px;font-weight:600;color:#111;text-decoration:none;border-bottom:1px solid #D4CFC7">Xem chi tiết →</a>
+      </div>
+      <div class="uc">
+        <div class="utag">Vận hành bên ngoài</div>
+        <div class="uct">Kết nối nhà cung cấp &amp; hãng tàu</div>
+        <p class="ucd">Agent theo dõi, đối chiếu và trao đổi với nhà cung cấp, hãng vận chuyển, khách hàng thay đội ngũ.</p>
+        <div class="uhl">Không cần gọi điện thủ công · Nhắc hạn tự động</div>
+        <a href="logistics.html" style="display:inline-block;margin-top:14px;font-size:13px;font-weight:600;color:#111;text-decoration:none;border-bottom:1px solid #D4CFC7">Xem chi tiết →</a>
+      </div>
+    </div>
+    <div id="p-taichinh" class="up">
+      <div class="uc">
+        <div class="utag">KYC / KYB Agent</div>
+        <div class="uct">Thẩm định hồ sơ tín dụng</div>
+        <p class="ucd">Agent kiểm tra hồ sơ, đối chiếu số liệu, nêu tín hiệu kèm bằng chứng — không phê duyệt tín dụng thay người.</p>
+        <div class="uhl">1/4 hồ sơ không cần xem thêm · 3/4 chuyển người xem xét</div>
+        <a href="tai-chinh.html" style="display:inline-block;margin-top:14px;font-size:13px;font-weight:600;color:#111;text-decoration:none;border-bottom:1px solid #D4CFC7">Xem chi tiết →</a>
+      </div>
+      <div class="uc">
+        <div class="utag">Giao dịch &amp; Đối soát</div>
+        <div class="uct">Giám sát giao dịch chưa khớp</div>
+        <p class="ucd">Theo dõi giao dịch ngân hàng chưa khớp, phân loại và cảnh báo theo ngưỡng. Bản tin điều hành 07:30 mỗi sáng.</p>
+        <div class="uhl">9 giao dịch chưa khớp · 380 triệu · Bản tin 07:30 sáng</div>
+        <a href="tai-chinh.html" style="display:inline-block;margin-top:14px;font-size:13px;font-weight:600;color:#111;text-decoration:none;border-bottom:1px solid #D4CFC7">Xem chi tiết →</a>
+      </div>
+    </div>
+    <div id="p-nhansu" class="up">
+      <div class="uc">
+        <div class="utag">Hợp đồng &amp; Onboarding</div>
+        <div class="uct">Không để hợp đồng hết hạn</div>
+        <p class="ucd">Agent quét toàn bộ hồ sơ, phát hiện hợp đồng sắp hết hạn. Căn cứ Bộ luật Lao động, soạn nháp gia hạn — người có thẩm quyền ký.</p>
+        <div class="uhl">146 hồ sơ quét · 2 đã hết hạn · 3 hết hạn trong vài ngày</div>
+        <a href="nhan-su.html" style="display:inline-block;margin-top:14px;font-size:13px;font-weight:600;color:#111;text-decoration:none;border-bottom:1px solid #D4CFC7">Xem chi tiết →</a>
+      </div>
+      <div class="uc">
+        <div class="utag">HR Helpdesk &amp; Lương</div>
+        <div class="uct">Giải thích lương minh bạch</div>
+        <p class="ucd">Nhân viên hỏi chính sách — nhận câu trả lời có nguồn. Thu nhập được giải thích từng dòng. Agent KPI xếp hạng và gợi ý coaching.</p>
+        <div class="uhl">KPI 104% → Khung 100–119% · Giải thích từng khoản</div>
+        <a href="nhan-su.html" style="display:inline-block;margin-top:14px;font-size:13px;font-weight:600;color:#111;text-decoration:none;border-bottom:1px solid #D4CFC7">Xem chi tiết →</a>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="dv"></div>
+<section class="sec pbg">
+  <div class="con">
+    <p class="sl">06 / Bằng chứng</p>
+    <h2 class="sh">Chúng tôi không bán thứ mình chưa dùng</h2>
+    <p class="sp">Đây là những quy trình KimQ đang vận hành bằng AI agent mỗi ngày.</p>
+    <div class="pgrd">
+      <div class="prc">
+        <div class="pra">Agent · Kế toán</div>
+        <p>Đối chiếu sao kê ngân hàng mỗi sáng 06:00. 38/41 giao dịch tự khớp. 3 khoản treo được báo cáo trước khi đội ngũ vào làm.</p>
+      </div>
+      <div class="prc">
+        <div class="pra">Agent · Nhân sự</div>
+        <p>Quét hợp đồng lao động định kỳ. Phát hiện hết hạn trước 30 ngày. Soạn nháp gia hạn kèm căn cứ pháp lý — người phụ trách ký.</p>
+      </div>
+      <div class="prc">
+        <div class="pra">Agent · Điều hành</div>
+        <p>Bản tin 07:30 mỗi sáng: 4 chỉ số vận hành, 3 quyết định cần phê duyệt. Lãnh đạo nhận qua Zalo, trả lời trong 5 phút.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="sec">
+  <div class="con">
+    <p class="sl">07 / Một ngày của đội AI agent</p>
+    <h2 class="sh">Đội ngũ làm việc như bình thường. Agent xử lý phần lặp lại.</h2>
+    <div style="margin-top:36px">
+      <div class="tl">
+        <div class="tlr"><div class="tlt">06:00</div><div class="tla">Agent Đối soát đối chiếu sao kê ngân hàng đêm qua: 41 giao dịch, 38 tự khớp, 3 khoản treo cần xem xét</div><div class="tls sa">Tự xử lý</div></div>
+        <div class="tlr"><div class="tlt">07:30</div><div class="tla">Bản tin điều hành gửi Zalo: Chi phí vận hành 21,4 tỷ (↑7%), Công nợ quá hạn 3,6 tỷ (↑28%), 3 quyết định chờ phê duyệt</div><div class="tls se">Báo cáo lãnh đạo</div></div>
+        <div class="tlr"><div class="tlt">08:00</div><div class="tla">Kế toán kiểm tra Zalo: nhận danh sách 3 khoản treo, bấm xác nhận 2 khoản, chuyển 1 khoản lên trưởng phòng</div><div class="tls sr">Người duyệt</div></div>
+        <div class="tlr"><div class="tlt">09:15</div><div class="tla">Nhân viên Sales hỏi Zalo: chiết khấu tối đa cho đơn hàng 500 triệu? Agent tra quy chế, trả lời có nguồn, ghi nhật ký</div><div class="tls sa">Tự xử lý</div></div>
+        <div class="tlr"><div class="tlt">11:00</div><div class="tla">Agent Logistics phát hiện lô hàng thông quan chậm 2,1 ngày, soạn nháp email nhắc hãng tàu, chuyển trưởng logistics duyệt gửi</div><div class="tls sr">Người duyệt</div></div>
+        <div class="tlr"><div class="tlt">14:00</div><div class="tla">Agent HR phát hiện hợp đồng anh Vũ Đức Long hết hạn sau 5 ngày, soạn nháp HĐLĐ không xác định thời hạn, gửi HR Manager</div><div class="tls sr">Người duyệt</div></div>
+        <div class="tlr"><div class="tlt">16:30</div><div class="tla">Agent KPI tổng hợp tháng 9: Lê Thu Hà (88 điểm) đứng đầu, 3 nhân sự cần coaching về tỷ lệ hoàn thành lần đầu dưới 90%</div><div class="tls sa">Tự xử lý</div></div>
+        <div class="tlr"><div class="tlt">17:00</div><div class="tla">Tổng kết ngày: 41 giao dịch xử lý, 5 quyết định đưa lên đúng cấp, 0 việc bị bỏ sót hay trễ hạn</div><div class="tls sa">Báo cáo ngày</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="dv"></div>
+<section class="sec">
+  <div class="con">
+    <p class="sl">08 / Bản tin điều hành</p>
+    <h2 class="sh">07:30 mỗi sáng: 4 con số, 3 quyết định</h2>
+    <p class="sp">Lãnh đạo nhận đủ ngữ cảnh để ra quyết định — không cần họp sáng để hỏi số liệu.</p>
+    <div class="bc">
+      <div class="btl">Bản tin điều hành · Thứ Hai 07:30 · Tự động</div>
+      <div class="mg">
+        <div><div class="mv">21,4 tỷ</div><div class="mlbl">Chi phí vận hành</div><div class="md du">↑7% so tuần trước</div></div>
+        <div><div class="mv">3,6 tỷ</div><div class="mlbl">Công nợ quá hạn &gt;30 ngày</div><div class="md du">↑28% · Cần hành động</div></div>
+        <div><div class="mv">5,8 ngày</div><div class="mlbl">Thời gian thông quan TB</div><div class="md du">↑2,1 ngày · Chậm hơn chuẩn</div></div>
+        <div><div class="mv">9 khoản</div><div class="mlbl">Giao dịch ngân hàng chưa khớp</div><div class="md du">380 triệu · Tổng treo</div></div>
+      </div>
+      <div class="dh">3 quyết định cần phê duyệt hôm nay</div>
+      <div class="dr"><div class="dn">1</div><div>Phát hành lại 14 hóa đơn — agent đã xác định nguyên nhân sai sót, soạn sẵn nội dung chỉnh sửa</div></div>
+      <div class="dr"><div class="dn">2</div><div>Phê duyệt phí lưu bãi 100 triệu — lô hàng thông quan chậm, hãng tàu đề nghị gia hạn</div></div>
+      <div class="dr"><div class="dn">3</div><div>Ký HĐLĐ không xác định thời hạn — anh Vũ Đức Long, hết hạn sau 5 ngày, đủ điều kiện theo Bộ luật Lao động 2019 Điều 20</div></div>
+    </div>
+  </div>
+</section>
+<div class="dv"></div>
+<section class="sec" id="roadmap">
+  <div class="con">
+    <p class="sl">09 / Lộ trình triển khai</p>
+    <h2 class="sh">Bốn bước từ một nghiệp vụ cụ thể đến vận hành hằng ngày</h2>
+    <p class="sp">Bắt đầu từ một nghiệp vụ có người phụ trách rõ ràng — không cần thay đổi toàn bộ hệ thống.</p>
+    <div class="rg">
+      <div class="rcard"><div class="rno">01 · Khảo sát</div><div class="rt">Chọn nghiệp vụ</div><p class="rd">Xác định một nghiệp vụ có người phụ trách rõ ràng. Hiểu biết thực tế trước — rồi mới thiết kế agent.</p></div>
+      <div class="rcard"><div class="rno">02 · Kết nối</div><div class="rt">Duyệt nguồn &amp; quyền</div><p class="rd">Xác định phạm vi dữ liệu agent được truy cập. Kết nối Excel, ERP, Zalo — không cần di chuyển dữ liệu.</p></div>
+      <div class="rcard"><div class="rno">03 · Thử nghiệm</div><div class="rt">Nhóm nhỏ dùng thật</div><p class="rd">Triển khai với nhóm nhỏ 3–5 người. Đo kết quả thật, điều chỉnh theo nghiệp vụ thực tế của doanh nghiệp.</p></div>
+      <div class="rcard"><div class="rno">04 · Vận hành</div><div class="rt">Mở rộng toàn phòng ban</div><p class="rd">Mở rộng sang các phòng ban khác. Chuẩn hóa bản tin, phân quyền và quy trình phê duyệt theo tổ chức.</p></div>
+    </div>
+    <div style="margin-top:36px;padding:26px 30px;background:var(--white);border:1px solid var(--gl);border-radius:var(--r)">
+      <p style="font-size:11px;font-weight:700;color:var(--gray);margin-bottom:14px;font-family:monospace;text-transform:uppercase;letter-spacing:.06em">Agent theo từng lĩnh vực</p>
+      <div class="ar">
+        <span class="pill">AI Invoice/AP Agent · Kế toán</span>
+        <span class="pill">AI Logistics Document Agent</span>
+        <span class="pill">AI Reconciliation Agent · Tài chính</span>
+        <span class="pill">KYC/KYB · Ngân hàng</span>
+        <span class="pill">Hợp đồng &amp; HR helpdesk · Nhân sự</span>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="ctas" id="contact">
+  <div class="con">
+    <p class="sl" style="color:rgba(255,255,255,.4)">Bắt đầu cùng KimQ</p>
+    <h2 class="sh" style="color:#fff;margin:0 auto 22px;max-width:560px;text-align:center">Hiểu nghiệp vụ trước, rồi mới viết phần mềm</h2>
+    <p class="sp" style="color:rgba(255,255,255,.52);margin:0 auto 46px;text-align:center">Chọn một nghiệp vụ có người phụ trách rõ ràng. Chúng tôi trao đổi nghiệp vụ, thiết kế giải pháp và chạy thật trong tuần đầu.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a href="mailto:contact@kimq.tech" class="bp" style="background:#fff;color:#111">Liên hệ tư vấn</a>
+      <a href="#products" class="bs" style="border-color:rgba(255,255,255,.3);color:#fff">Xem sản phẩm</a>
+    </div>
+    <p style="margin-top:30px;font-size:13px;color:rgba(255,255,255,.32);text-align:center">contact@kimq.tech · Không tốn chi phí máy chủ riêng · Bắt đầu nhỏ, trả theo phạm vi</p>
+  </div>
+</section>
+<footer>
+  <div class="con">
+    <div class="fg">
+      <div>
+        <span class="flo">KimQ</span>
+        <p class="ftag">Studio sản phẩm số tại Việt Nam. Phát triển phần mềm và AI agent theo cách AI-native — agent làm việc ngay trên Zalo, Excel và phần mềm doanh nghiệp đang dùng.</p>
+      </div>
+      <div class="fc">
+        <h4>Sản phẩm</h4>
+        <a href="#products">KimQ Work</a>
+        <a href="#products">KimQ Insight</a>
+        <a href="#products">KimQ Flow</a>
+      </div>
+      <div class="fc">
+        <h4>Ứng dụng</h4>
+        <a href="#usecases">Kế toán</a>
+        <a href="#usecases">Logistics</a>
+        <a href="#usecases">Tài chính</a>
+        <a href="#usecases">Nhân sự</a>
+      </div>
+      <div class="fc">
+        <h4>Công ty</h4>
+        <a href="#about">Về KimQ</a>
+        <a href="#roadmap">Lộ trình</a>
+        <a href="mailto:contact@kimq.tech">Liên hệ</a>
+      </div>
+    </div>
+    <div class="fb">
+      <span class="fc2">&copy; 2026 KimQ. All rights reserved.</span>
+      <span class="fct"><a href="mailto:contact@kimq.tech">contact@kimq.tech</a></span>
+    </div>
+  </div>
+</footer>
+<script>
+function switchTab(e,id){
+  document.querySelectorAll('.tb').forEach(function(b){b.classList.remove('act')});
+  document.querySelectorAll('.up').forEach(function(p){p.classList.remove('act')});
+  e.currentTarget.classList.add('act');
+  document.getElementById('p-'+id).classList.add('act');
+}
+(function(){
+  var h=document.getElementById('hero-h1');
+  if(!h)return;
+  var words=h.textContent.trim().split(/(\s+)/);
+  h.innerHTML='';
+  var delay=0;
+  words.forEach(function(w){
+    if(/^\s+$/.test(w)){h.appendChild(document.createTextNode(' '));}
+    else{var s=document.createElement('span');s.className='word';s.textContent=w;s.style.animationDelay=delay+'ms';h.appendChild(s);delay+=55;}
+  });
+})();
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var t=document.querySelector(a.getAttribute('href'));
+    if(t){e.preventDefault();window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-76,behavior:'smooth'});}
+  });
+});
+</script>
+</body>
+</html>
