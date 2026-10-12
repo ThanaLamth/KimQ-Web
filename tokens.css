@@ -2,8 +2,8 @@
 @font-face{font-family:"Anthropic Sans";src:url("fonts/AnthropicSans-Italic.woff2") format("woff2");font-weight:300 800;font-style:italic;font-display:swap}
 @font-face{font-family:"Anthropic Serif";src:url("fonts/AnthropicSerif-Roman.woff2") format("woff2");font-weight:300 800;font-style:normal;font-display:swap}
 @font-face{font-family:"Anthropic Serif";src:url("fonts/AnthropicSerif-Italic.woff2") format("woff2");font-weight:300 800;font-style:italic;font-display:swap}
-@font-face{font-family:"Anthropic Mono";src:url("fonts/AnthropicMono-Roman.woff2") format("woff2");font-weight:300 800;font-style:normal;font-display:swap}
-@font-face{font-family:"Anthropic Mono";src:url("fonts/AnthropicMono-Italic.woff2") format("woff2");font-weight:300 800;font-style:italic;font-display:swap}
+@font-face{font-family:"Anthropic Mono";src:url("fonts/AnthropicMono-Roman.woff2") format("woff2");font-weight:300 800;font-style:normal;font-display:block}
+@font-face{font-family:"Anthropic Mono";src:url("fonts/AnthropicMono-Italic.woff2") format("woff2");font-weight:300 800;font-style:italic;font-display:block}
 :root{
 --font-sans:"Anthropic Sans",Arial,sans-serif;
 --font-serif:"Anthropic Serif",Georgia,serif;
